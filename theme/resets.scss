@@ -1,0 +1,31 @@
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+div strong + div ul {
+  margin: 0;
+}
+
+li > p {
+  margin: 0;
+  margin-block-end: 0.5rem;
+}
+
+ol ol ul,
+ol ul ul,
+ul ol ul,
+ul ul ul {
+  list-style-type: circle;
+}
+
+/* li[data-line] > ::marker, */
+li[data-line]:not(.task-list-item) > ::marker {
+  display: list-item;
+  list-style-type: disc;
+}
+li[data-line]:not(.task-list-item) > :not(ul):not(div.list-collapse-indicator) {
+  /* list-style-type: circle; */
+  list-style-type: none;
+}
