@@ -2,11 +2,14 @@
   color-scheme: light;
   --highlight-mix-blend-mode: darken;
   --opacity-translucency: 0.6;
+
   --mono-rgb-0: 255, 255, 255;
   --mono-rgb-100: 0, 0, 0;
+
   --color-red-rgb: 228, 55, 75;
-  --color-red: var(--red-bright);
   --color-green-rgb: 12, 181, 79;
+
+  --color-red: var(--red-bright);
   --color-green: var(--green-bright);
   --color-orange: var(--orange-bright);
   --color-yellow: var(--yellow-bright);
@@ -14,18 +17,6 @@
   --color-blue: var(--blue-bright);
   --color-purple: var(--purple-bright);
   --color-pink: var(--pink-bright);
-  --color-base-00: var(--gray-01);
-  --color-base-05: var(--gray-02);
-  --color-base-10: var(--gray-03);
-  --color-base-20: var(--gray-04);
-  --color-base-25: var(--gray-05);
-  --color-base-30: var(--gray-06);
-  --color-base-35: var(--gray-07);
-  --color-base-40: var(--gray-08);
-  --color-base-50: var(--gray-09);
-  --color-base-60: var(--gray-10);
-  --color-base-70: var(--gray-11);
-  --color-base-100: var(--gray-14);
   --color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
   --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
   --color-accent-1: hsl(
@@ -38,7 +29,7 @@
     var(--accent-s),
     calc(var(--accent-l) + 5%)
   );
-  --background-secondary-alt: var(--color-base-05);
+  --background-secondary-alt: var(--gray-11);
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
   --background-modifier-cover: rgba(220, 220, 220, 0.4);
   --text-highlight-bg: rgba(255, 208, 0, 0.4);

@@ -1,0 +1,49 @@
+:root {
+  /* Theme fonts/colors */
+  --current-opacity: 50;
+  --gray-13: hsl(220, 9.7%, 6.1%);
+  --gray-12: hsl(217.5, 14.3%, 11%);
+  --gray-11: hsl(220, 14.6%, 16.1%);
+  --gray-10: hsl(220, 16.4%, 21.6%);
+  --gray-09: hsl(221.7, 16.3%, 27.6%);
+  --gray-08: hsl(220, 16.8%, 31.6%);
+  --gray-07: hsl(220, 16.5%, 35.7%);
+  --gray-06: hsl(220, 10.8%, 48.8%);
+  --gray-05: hsl(220, 12.4%, 62%);
+  --gray-04: hsl(220, 16.5%, 75.1%);
+  --gray-03: hsl(218.8, 27.9%, 88%);
+  --gray-02: hsl(218.2, 26.8%, 92%);
+  --gray-01: hsl(217.5, 26.7%, 94.1%);
+  --gray-00: hsl(0, 0%, 100%);
+
+  --purple: hsl(311.1, 20.2%, 63.1%);
+  --purple-bright: hsl(313.5, 31.6%, 44.1%);
+  --purple-dark: hsl(314.5, 29.9%, 38%);
+  --green: hsl(92.4, 27.8%, 64.7%);
+  --green-bright: hsl(98.1, 34.1%, 51.2%);
+  --green-dark: hsl(99.1, 30%, 43.1%);
+  --yellow: hsl(40, 70.6%, 73.3%);
+  --yellow-bright: hsl(40.1, 79.8%, 65.1%);
+  --yellow-dark: hsl(39.9, 67.5%, 54.1%);
+  --orange: hsl(14.4, 50.5%, 62.7%);
+  --orange-bright: hsl(14.2, 49.1%, 54.5%);
+  --orange-dark: hsl(13.7, 50.2%, 48%);
+  --red: hsl(354.3, 42.3%, 56.5%);
+  --red-bright: hsl(355.9, 40.2%, 50.2%);
+  --red-dark: hsl(356.6, 41.1%, 42%);
+  --blue: hsl(210, 34%, 63.1%);
+  --blue-bright: hsl(213.1, 32%, 52.2%);
+  --blue-dark: hsl(216.4, 44.8%, 41.2%);
+  --cyan: hsl(178.7, 25.1%, 64.9%);
+  --cyan-bright: hsl(175.8, 32.1%, 56.1%);
+  --cyan-dark: hsl(175.7, 29.7%, 46.3%);
+  --pink: hsl(340.3, 43.8%, 71.4%);
+  --pink-bright: hsl(340.2, 48%, 61.6%);
+  --pink-dark: hsl(340, 33.3%, 49.4%);
+
+  --font-monospace: "Source Code Variable", monospace;
+  --font-sans: "Source Sans Variable", "Fira Sans", Inter, "Sans Serif";
+  --font-serif: "Source Serif Variable", "Fira Sans", "Serif";
+  --default-font: var(--font-sans);
+  --editor-font-size: 1rem;
+}

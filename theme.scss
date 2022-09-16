@@ -1,7 +1,8 @@
 // Variables
 @use "resources/fonts";
 
-@use "root";
-@use "theme/dark";
-@use "theme/light";
-@use "theme/resets";
+@use "base/root";
+@use "base/resets";
+@use "base/app";
+@use "base/theme-dark";
+@use "base/theme-light";

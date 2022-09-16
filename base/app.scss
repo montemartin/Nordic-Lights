@@ -1,4 +1,4 @@
-// These are the default variables defined by the Obsidian app. This is here as a reference - it is not included in the build.
+// These are the default variables defined by the Obsidian app. Values changed here will override the defaults set by Obsidian.
 body {
   /* Animations */
   --anim-duration-none: 0;
@@ -11,7 +11,7 @@ body {
   --anim-motion-jumpy: cubic-bezier(0.68, -0.55, 0.27, 1.55);
 
   /* Blockquotes */
-  --blockquote-border-thickness: 2px;
+  --blockquote-border-thickness: 1px;
   --blockquote-border-color: var(--interactive-accent);
   --blockquote-font-style: normal;
   --blockquote-color: inherit;
@@ -50,7 +50,7 @@ body {
   /* Code */
   --code-size: var(--font-smaller);
   --code-background: var(--background-primary-alt);
-  --code-normal: var(--color-base-70);
+  --code-normal: var(--gray-04);
   --code-comment: var(--text-faint);
   --code-punctuation: var(--text-muted);
   --code-tag: var(--color-red);
@@ -133,7 +133,7 @@ body {
   /* Graphs */
   --graph-controls-width: 240px;
   --graph-text: var(--text-normal);
-  --graph-line: var(--color-base-35, var(--background-modifier-border-focus));
+  --graph-line: var(--gray-04, var(--background-modifier-border-focus));
   --graph-node: var(--text-muted);
   --graph-node-unresolved: var(--text-faint);
   --graph-node-focused: var(--text-accent);
@@ -186,7 +186,7 @@ body {
   --h6-weight: 600;
 
   /* View header */
-  --header-height: 40px;
+  --header-height: 2rem;
 
   /* Horizontal rules */
   --hr-color: var(--background-modifier-border);
@@ -303,7 +303,7 @@ body {
   --modal-max-width-narrow: 800px;
   --modal-border-width: var(--border-width);
   --modal-border-color: var(
-    --color-base-40,
+    var(--gray-06),
     var(--background-modifier-border-focus)
   );
   --modal-radius: var(--radius-l);
@@ -323,14 +323,14 @@ body {
   --prompt-max-height: 70vh;
   --prompt-border-width: var(--border-width);
   --prompt-border-color: var(
-    --color-base-40,
+    var(--gray-06),
     var(--background-modifier-border-focus)
   );
 
   /* Radiuses */
-  --radius-s: 4px;
-  --radius-m: 8px;
-  --radius-l: 10px;
+  --radius-s: 2px;
+  --radius-m: 4px;
+  --radius-l: 6px;
 
   /* Ribbon */
   --ribbon-background: var(--background-secondary);
@@ -344,9 +344,9 @@ body {
   --scrollbar-thumb-bg: rgba(var(--mono-rgb-100), 0.1);
 
   /* Layout sizing - for padding and margins */
-  --size-2-1: 2px;
-  --size-2-2: 4px;
-  --size-2-3: 6px;
+  --size-2-1: 0.125rem;
+  --size-2-2: 0.25rem;
+  --size-2-3: 0.375;
   --size-4-1: 4px;
   --size-4-2: 8px;
   --size-4-3: 12px;
@@ -360,7 +360,7 @@ body {
 
   /* Sidebar */
   --sidebar-markdown-font-size: calc(var(--font-text-size) * 0.9);
-  --sidebar-tab-text-display: none;
+  --sidebar-tab-text-display: ;
 
   /* Sliders */
   --slider-thumb-height: 18px;
@@ -483,14 +483,14 @@ body {
   --accent-l: 68%;
 
   /* Backgrounds */
-  --background-primary: var(--color-base-00);
-  --background-primary-alt: var(--color-base-10);
-  --background-secondary: var(--color-base-20);
+  --background-primary: var(--gray-12);
+  --background-primary-alt: var(--gray-11);
+  --background-secondary: var(--gray-10);
   --background-modifier-hover: rgba(var(--mono-rgb-100), 0.075);
   --background-modifier-active-hover: hsla(var(--interactive-accent-hsl), 0.15);
-  --background-modifier-border: var(--color-base-30);
-  --background-modifier-border-hover: var(--color-base-35);
-  --background-modifier-border-focus: var(--color-base-40);
+  --background-modifier-border: var(--gray-09);
+  --background-modifier-border-hover: var(--gray-08);
+  --background-modifier-border-focus: var(--gray-07);
   --background-modifier-error-rgb: var(--color-red-rgb);
   --background-modifier-error: var(--color-red);
   --background-modifier-error-hover: var(--color-red);
@@ -499,76 +499,21 @@ body {
   --background-modifier-message: rgba(0, 0, 0, 0.9);
 
   /* Inputs */
-  --background-modifier-form-field: var(--color-base-00);
+  --background-modifier-form-field: var(--gray-13);
 
   /* Text */
-  --text-normal: var(--color-base-100);
-  --text-muted: var(--color-base-70);
-  --text-faint: var(--color-base-50);
+  --text-normal: var(--gray-02);
+  --text-muted: var(--gray-06);
+  --text-faint: var(--gray-05);
   --text-on-accent: white;
   --text-error: var(--color-red);
   --text-success: var(--color-green);
   --text-selection: hsla(var(--color-accent-hsl), 0.2);
   --text-accent: var(--color-accent);
   --text-accent-hover: var(--color-accent-2);
-  --interactive-normal: var(--color-base-00);
+  --interactive-normal: var(--gray-00);
   --interactive-hover: var(--color-base-10);
   --interactive-accent-hsl: var(--color-accent-hsl);
   --interactive-accent: var(--color-accent-1);
   --interactive-accent-hover: var(--color-accent-2);
-}
-.theme-light {
-  color-scheme: light;
-  --highlight-mix-blend-mode: darken;
-  --mono-rgb-0: 255, 255, 255;
-  --mono-rgb-100: 0, 0, 0;
-  --color-red-rgb: 228, 55, 75;
-  --color-red: #e4374b;
-  --color-green-rgb: 12, 181, 79;
-  --color-green: #0cb54f;
-  --color-orange: #d96c00;
-  --color-yellow: #bd8e37;
-  --color-cyan: #2db7b5;
-  --color-blue: #086ddd;
-  --color-purple: #876be0;
-  --color-pink: #c32b74;
-  --color-base-00: #ffffff;
-  --color-base-05: #fcfcfc;
-  --color-base-10: #fafafa;
-  --color-base-20: #f6f6f6;
-  --color-base-25: #e3e3e3;
-  --color-base-30: #e0e0e0;
-  --color-base-35: #d4d4d4;
-  --color-base-40: #bdbdbd;
-  --color-base-50: #ababab;
-  --color-base-60: #707070;
-  --color-base-70: #5a5a5a;
-  --color-base-100: #222222;
-  --color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
-  --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-  --color-accent-1: hsl(
-    var(--accent-h),
-    var(--accent-s),
-    calc(var(--accent-l) + 2.5%)
-  );
-  --color-accent-2: hsl(
-    var(--accent-h),
-    var(--accent-s),
-    calc(var(--accent-l) + 5%)
-  );
-  --background-secondary-alt: var(--color-base-05);
-  --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
-  --background-modifier-cover: rgba(220, 220, 220, 0.4);
-  --text-highlight-bg: rgba(255, 208, 0, 0.4);
-  --text-highlight-bg-active: rgba(255, 128, 0, 0.4);
-  --input-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.12),
-    0 2px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 1.5px 0 rgba(0, 0, 0, 0.03),
-    0 1px 2px 0 rgba(0, 0, 0, 0.04), 0 0 0 0 transparent;
-  --input-shadow-hover: inset 0 0 0 1px rgba(0, 0, 0, 0.17),
-    0 2px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 1.5px 0 rgba(0, 0, 0, 0.03),
-    0 1px 2px 0 rgba(0, 0, 0, 0.04), 0 0 0 0 transparent;
-  --shadow-s: 0px 1px 2px rgba(0, 0, 0, 0.028),
-    0px 3.4px 6.7px rgba(0, 0, 0, 0.042), 0px 15px 30px rgba(0, 0, 0, 0.07);
-  --shadow-l: 0px 1.8px 7.3px rgba(0, 0, 0, 0.071),
-    0px 6.3px 24.7px rgba(0, 0, 0, 0.112), 0px 30px 90px rgba(0, 0, 0, 0.2);
 }
