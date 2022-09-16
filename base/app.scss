@@ -381,19 +381,19 @@ body {
 
   /* Tabs */
   --tab-background-active: var(--background-primary);
-  --tab-text-color: var(--text-faint);
-  --tab-text-color-focused: var(--text-muted);
-  --tab-text-color-focused-active: var(--text-normal);
-  --tab-font-size: var(--font-ui-small);
+  --tab-text-color: var(--text-muted);
+  --tab-text-color-focused: var(--text-faint);
+  --tab-text-color-focused-active: var(--text-faint);
+  --tab-font-size: var(--font-ui-smaller);
   --tab-font-weight: inherit;
   --tab-container-background: var(--background-secondary);
-  --tab-divider-color: var(--background-modifier-border-hover);
+  --tab-divider-color: var(--divider-color);
   --tab-outline-color: var(--divider-color);
   --tab-outline-width: 1px;
-  --tab-curve: 6px;
-  --tab-radius: var(--radius-s);
-  --tab-radius-active: 6px 6px 0 0;
-  --tab-width: 200px;
+  --tab-curve: 0px;
+  --tab-radius: 0;
+  --tab-radius-active: 0;
+  --tab-width: auto;
   --tab-max-width: 320px;
 
   /* Stacked tabs */
@@ -446,7 +446,7 @@ body {
 
   /* Window frame */
   --titlebar-background: var(--background-secondary);
-  --titlebar-background-focused: var(--background-secondary-alt);
+  --titlebar-background-focused: var(--background-secondary);
   --titlebar-border-width: 0px;
   --titlebar-border-color: var(--background-modifier-border);
   --titlebar-text-color: var(--text-muted);
@@ -485,7 +485,8 @@ body {
   /* Backgrounds */
   --background-primary: var(--gray-12);
   --background-primary-alt: var(--gray-11);
-  --background-secondary: var(--gray-10);
+  --background-secondary: var(--gray-11);
+  --background-secondary-alt: var(--gray-11);
   --background-modifier-hover: rgba(var(--mono-rgb-100), 0.075);
   --background-modifier-active-hover: hsla(var(--interactive-accent-hsl), 0.15);
   --background-modifier-border: var(--gray-09);

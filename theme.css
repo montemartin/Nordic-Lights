@@ -82,11 +82,12 @@
   --pink: hsl(340.3, 43.8%, 71.4%);
   --pink-bright: hsl(340.2, 48%, 61.6%);
   --pink-dark: hsl(340, 33.3%, 49.4%);
-  --font-monospace: "Source Code Variable", monospace;
+  --font-mono: "Source Code Variable", monospace;
   --font-sans: "Source Sans Variable", "Fira Sans", Inter, "Sans Serif";
   --font-serif: "Source Serif Variable", "Fira Sans", "Serif";
-  --default-font: var(--font-sans);
-  --editor-font-size: 1rem;
+  --font-text-theme: var(--font-sans);
+  --font-interface-theme: var(--font-serif);
+  --font-monospace-theme: var(--font-monospace-theme);
 }
 
 ul,
@@ -461,19 +462,19 @@ body {
   --status-bar-radius: var(--radius-m) 0 0 0;
   /* Tabs */
   --tab-background-active: var(--background-primary);
-  --tab-text-color: var(--text-faint);
-  --tab-text-color-focused: var(--text-muted);
-  --tab-text-color-focused-active: var(--text-normal);
-  --tab-font-size: var(--font-ui-small);
+  --tab-text-color: var(--text-muted);
+  --tab-text-color-focused: var(--text-faint);
+  --tab-text-color-focused-active: var(--text-faint);
+  --tab-font-size: var(--font-ui-smaller);
   --tab-font-weight: inherit;
   --tab-container-background: var(--background-secondary);
-  --tab-divider-color: var(--background-modifier-border-hover);
+  --tab-divider-color: var(--divider-color);
   --tab-outline-color: var(--divider-color);
   --tab-outline-width: 1px;
-  --tab-curve: 6px;
-  --tab-radius: var(--radius-s);
-  --tab-radius-active: 6px 6px 0 0;
-  --tab-width: 200px;
+  --tab-curve: 0px;
+  --tab-radius: 0;
+  --tab-radius-active: 0;
+  --tab-width: auto;
   --tab-max-width: 320px;
   /* Stacked tabs */
   --tab-stacked-pane-width: 700px;
@@ -522,7 +523,7 @@ body {
   --tag-radius: 2em;
   /* Window frame */
   --titlebar-background: var(--background-secondary);
-  --titlebar-background-focused: var(--background-secondary-alt);
+  --titlebar-background-focused: var(--background-secondary);
   --titlebar-border-width: 0px;
   --titlebar-border-color: var(--background-modifier-border);
   --titlebar-text-color: var(--text-muted);
@@ -555,7 +556,8 @@ body {
   /* Backgrounds */
   --background-primary: var(--gray-12);
   --background-primary-alt: var(--gray-11);
-  --background-secondary: var(--gray-10);
+  --background-secondary: var(--gray-11);
+  --background-secondary-alt: var(--gray-11);
   --background-modifier-hover: rgba(var(--mono-rgb-100), 0.075);
   --background-modifier-active-hover: hsla(var(--interactive-accent-hsl), 0.15);
   --background-modifier-border: var(--gray-09);
@@ -588,7 +590,10 @@ body {
 
 .theme-dark {
   color-scheme: dark;
-  --highlight-mix-blend-mode: lighten;
+  --font-text-theme: var(--font-sans);
+  --font-interface-theme: var(--font-sans);
+  --font-monospace-theme: var(--font-mono);
+  --highlight-mix-blend-mode: ;
   --opacity-translucency: 0.75;
   --mono-rgb-0: 255, 255, 255;
   --mono-rgb-100: 0, 0, 0;
@@ -602,23 +607,40 @@ body {
   --color-blue: var(--blue);
   --color-purple: var(--purple);
   --color-pink: var(--pink);
+  --color-base-00: var(--gray-13);
+  --color-base-05: var(--gray-12);
+  --color-base-10: var(--gray-11);
+  --color-base-20: var(--gray-10);
+  --color-base-25: var(--gray-09);
+  --color-base-30: var(--gray-08);
+  --color-base-35: var(--gray-07);
+  --color-base-40: var(--gray-06);
+  --color-base-50: var(--gray-05);
+  --color-base-60: var(--gray-04);
+  --color-base-70: var(--gray-03);
+  --color-base-100: var(--gray-01);
   --color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
   --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-  --color-accent-1: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 3.8%));
-  --color-accent-2: hsl(var(--accent-h),var(--accent-s),calc(var(--accent-l) + 3.8%));
+  --color-accent-1: hsl(
+    var(--accent-h),
+    var(--accent-s),
+    calc(var(--accent-l) - 3.8%)
+  );
+  --color-accent-2: hsl(
+    var(--accent-h),
+    var(--accent-s),
+    calc(var(--accent-l) + 3.8%)
+  );
   --background-modifier-form-field: var(--gray-02);
-  --background-secondary-alt: var(--gray-04);
   --interactive-normal: var(--gray-05);
   --interactive-hover: var(--gray-06);
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
   --background-modifier-cover: rgba(10, 10, 10, 0.4);
   --text-highlight-bg: var(--color-yellow);
-  --text-highlight-bg-active: var(--color-yellow-bright)
+  --text-highlight-bg-active: var(--yellow-bright);
   --text-selection: hsla(var(--interactive-accent-hsl), 0.25);
-  --input-shadow: inset
-    0 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.09),
-    0 2px 4px 0 rgba(0, 0, 0, 0.15),
-    0 1px 1.5px 0 rgba(0, 0, 0, 0.1),
+  --input-shadow: inset 0 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.09),
+    0 2px 4px 0 rgba(0, 0, 0, 0.15), 0 1px 1.5px 0 rgba(0, 0, 0, 0.1),
     0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 0 0 0 transparent;
   --input-shadow-hover: inset 0 0.5px 1px 0.5px rgba(255, 255, 255, 0.16),
     0 2px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 1.5px 0 rgba(0, 0, 0, 0.2),

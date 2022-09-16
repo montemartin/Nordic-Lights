@@ -41,9 +41,11 @@
   --pink-bright: hsl(340.2, 48%, 61.6%);
   --pink-dark: hsl(340, 33.3%, 49.4%);
 
-  --font-monospace: "Source Code Variable", monospace;
+  --font-mono: "Source Code Variable", monospace;
   --font-sans: "Source Sans Variable", "Fira Sans", Inter, "Sans Serif";
   --font-serif: "Source Serif Variable", "Fira Sans", "Serif";
-  --default-font: var(--font-sans);
-  --editor-font-size: 1rem;
+
+  --font-text-theme: var(--font-sans);
+  --font-interface-theme: var(--font-serif);
+  --font-monospace-theme: var(--font-monospace-theme);
 }
