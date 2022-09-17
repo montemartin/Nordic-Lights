@@ -185,7 +185,7 @@ body {
   --cursor: default;
   --cursor-link: pointer;
   /* Dialogs - e.g. small modals, confirmations */
-  --dialog-width: 560px;
+  --dialog-width: 50%;
   --dialog-max-width: 80vw;
   --dialog-max-height: 85vh;
   /* Dividers — between panes */
@@ -209,20 +209,20 @@ body {
   --embed-block-shadow-hover: 0 0 0 1px var(--background-modifier-border),
     inset 0 0 0 1px var(--background-modifier-border);
   /* File layout */
-  --file-line-width: 700px;
-  --file-folding-offset: 24px;
-  --file-margins: var(--size-4-8);
+  --file-line-width: 100ch;
+  --file-folding-offset: 1.5rem;
+  --file-margins: var(--size-4-2);
   --file-header-font-size: var(--font-text-size);
   --file-header-font-weight: var(--font-medium);
   /* Relative font sizes */
-  --font-smallest: 0.8em;
-  --font-smaller: 0.875em;
-  --font-small: 0.933em;
+  --font-smallest: 0.625rem;
+  --font-smaller: 0.75rem;
+  --font-small: 0.875rem;
   /* UI font sizes */
-  --font-ui-smaller: 12px;
-  --font-ui-small: 13px;
-  --font-ui-medium: 15px;
-  --font-ui-large: 20px;
+  --font-ui-smaller: 0.75rem;
+  --font-ui-small: 0.875rem;
+  --font-ui-medium: 1rem;
+  --font-ui-large: 1.25rem;
   /* Font weights */
   --font-thin: 100;
   --font-extralight: 200;
@@ -300,14 +300,14 @@ body {
   --icon-s: 16px;
   --icon-m: 18px;
   --icon-l: 18px;
-  --icon-xs-stroke-width: 2px;
-  --icon-s-stroke-width: 2px;
-  --icon-m-stroke-width: 1.75px;
+  --icon-xs-stroke-width: 1px;
+  --icon-s-stroke-width: 1px;
+  --icon-m-stroke-width: 1.5px;
   --icon-l-stroke-width: 1.75px;
   --icon-color: var(--text-muted);
   --icon-color-hover: var(--text-muted);
   --icon-color-active: var(--text-accent);
-  --icon-color-focused: var(--text-normal);
+  --icon-color-focused: var(--color-accent-2);
   --icon-opacity: 0.85;
   --icon-opacity-hover: 1;
   --icon-opacity-active: 1;
@@ -319,9 +319,9 @@ body {
   /* Inline title */
   --inline-title-color: var(--h1-color);
   --inline-title-font: var(--h1-font);
-  --inline-title-line-height: var(--h1-line-height);
-  --inline-title-size: var(--h1-size);
-  --inline-title-style: var(--h1-style);
+  --inline-title-line-height: 1em;
+  --inline-title-size: 1.375rem;
+  --inline-title-style: italic;
   --inline-title-variant: var(--h1-variant);
   --inline-title-weight: var(--h1-weight);
   /* Inputs */
@@ -444,7 +444,7 @@ body {
   --size-4-18: 72px;
   /* Sidebar */
   --sidebar-markdown-font-size: calc(var(--font-text-size) * 0.9);
-  --sidebar-tab-text-display: ;
+  --sidebar-tab-text-display: none;
   /* Sliders */
   --slider-thumb-height: 18px;
   --slider-thumb-width: 18px;
@@ -619,6 +619,9 @@ body {
   --color-base-60: var(--gray-04);
   --color-base-70: var(--gray-03);
   --color-base-100: var(--gray-01);
+  --accent-h: 210;
+  --accent-s: 34%;
+  --accent-l: 63%;
   --color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
   --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
   --color-accent-1: hsl(
@@ -649,6 +652,7 @@ body {
     0px 3.4px 6.7px rgba(0, 0, 0, 0.179), 0px 15px 30px rgba(0, 0, 0, 0.3);
   --shadow-l: 0px 1.8px 7.3px rgba(0, 0, 0, 0.071),
     0px 6.3px 24.7px rgba(0, 0, 0, 0.112), 0px 30px 90px rgba(0, 0, 0, 0.2);
+  --text-normal-reverse: var(--gray-13);
 }
 
 .theme-light {
@@ -694,6 +698,128 @@ body {
     0px 3.4px 6.7px rgba(0, 0, 0, 0.042), 0px 15px 30px rgba(0, 0, 0, 0.07);
   --shadow-l: 0px 1.8px 7.3px rgba(0, 0, 0, 0.071),
     0px 6.3px 24.7px rgba(0, 0, 0, 0.112), 0px 30px 90px rgba(0, 0, 0, 0.2);
+}
+
+.nav-header {
+  padding: 0;
+  justify-content: center;
+}
+
+.nav-buttons-container {
+  box-shadow: 0px 0.5px var(--gray-10);
+  width: 90%;
+  margin: 0px auto;
+}
+
+.nav-action-button {
+  padding: 0.5rem 0.75rem;
+  margin: 0.5rem 1px;
+  line-height: 0;
+  border-radius: 0;
+  color: var(--text-faint);
+}
+.nav-action-button svg {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+.nav-action-button:hover {
+  background-color: var(--gray-10);
+  color: var(--interactive-accent);
+  fill: var(--interactive-accent);
+}
+.nav-action-button.is-active {
+  background-color: var(--background-active);
+  color: var(--text-normal);
+  fill: var(--text-normal);
+}
+.nav-action-button.is-active:hover {
+  background-color: var(--background-active);
+  color: var(--interactive-accent);
+  fill: var(--interactive-accent);
+}
+
+.nav-file-title-content {
+  font-family: var(--font-monospace);
+  color: var(--color-yellow);
+  font-weight: 325;
+  font-size: 0.75rem;
+  letter-spacing: -0.1px;
+  filter: saturate(0.5);
+}
+
+.nav-folder.mod-root > .nav-folder-title {
+  display: none;
+}
+
+/* @todo collapse icons need work */
+.collapse-icon > svg {
+  display: none;
+}
+
+.collapse-icon::before {
+  content: "↓";
+  opacity: 0.8;
+  transition: all 0.25s ease;
+  color: var(--light-2);
+  font-size: 0.875em;
+}
+
+.is-collapsed .collapse-icon::before {
+  content: "→";
+  opacity: 0.5;
+}
+
+.markdown-source-view .collapse-icon {
+  /* color: var(--text-faint); */
+  padding: 0.5rem;
+}
+
+.markdown-source-view .collapse-icon::before {
+  font-size: 1rem;
+  opacity: 0.6;
+}
+
+.markdown-source-view .is-collapsed .collapse-icon::before {
+  font-size: 1rem;
+  opacity: 0.3;
+}
+
+.markdown-source-view .cm-line .collapse-icon:hover::before {
+  opacity: 1;
+}
+
+.workspace-tab-header {
+  flex: 1 1 auto;
+  min-width: 3rem;
+  max-width: 6rem;
+}
+.workspace-tab-header-container {
+  padding-top: 0;
+}
+.workspace-tab-header-container-inner {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  justify-content: center;
+  flex: 1 1 auto;
+}
+.workspace-tab-header-inner {
+  padding: 0;
+}
+.workspace-tab-header-inner-icon {
+  line-height: 0;
+  padding: 0 0.5rem;
+  margin: auto;
+}
+.workspace-tab-header-inner-icon svg {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.workspace-tabs .view-header {
+  margin: 0;
+  padding: 0 1rem;
+  border-bottom: 0;
 }
 
 /*# sourceMappingURL=theme.css.map */

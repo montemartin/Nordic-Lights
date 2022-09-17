@@ -34,6 +34,10 @@
   --color-base-70: var(--gray-03);
   --color-base-100: var(--gray-01);
 
+  --accent-h: 210;
+  --accent-s: 34%;
+  --accent-l: 63%;
+
   --color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
   --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
   --color-accent-1: hsl(
@@ -65,4 +69,6 @@
     0px 3.4px 6.7px rgba(0, 0, 0, 0.179), 0px 15px 30px rgba(0, 0, 0, 0.3);
   --shadow-l: 0px 1.8px 7.3px rgba(0, 0, 0, 0.071),
     0px 6.3px 24.7px rgba(0, 0, 0, 0.112), 0px 30px 90px rgba(0, 0, 0, 0.2);
+
+  --text-normal-reverse: var(--gray-13);
 }

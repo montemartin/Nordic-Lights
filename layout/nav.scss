@@ -1,0 +1,54 @@
+// Nav is used for menus inside leaf containers
+.nav-header {
+  padding: 0;
+  justify-content: center;
+}
+
+.nav-buttons-container {
+  box-shadow: 0px 0.5px var(--gray-10);
+  width: 90%;
+  margin: 0px auto;
+}
+
+.nav-action-button {
+  padding: 0.5rem 0.75rem;
+  margin: 0.5rem 1px;
+  line-height: 0;
+  border-radius: 0;
+  color: var(--text-faint);
+
+  & svg {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+  &:hover {
+    background-color: var(--gray-10);
+    color: var(--interactive-accent);
+    fill: var(--interactive-accent);
+  }
+
+  &.is-active {
+    background-color: var(--background-active);
+    color: var(--text-normal);
+    fill: var(--text-normal);
+  }
+  &.is-active:hover {
+    background-color: var(--background-active);
+    color: var(--interactive-accent);
+    fill: var(--interactive-accent);
+  }
+}
+
+.nav-file-title-content {
+  font-family: var(--font-monospace);
+  color: var(--color-yellow);
+  font-weight: 325;
+  font-size: 0.75rem;
+  letter-spacing: -0.1px;
+  filter: saturate(0.5);
+}
+
+// Hides vault name (displayed at root level)
+.nav-folder.mod-root > .nav-folder-title {
+  display: none;
+}

@@ -1,0 +1,31 @@
+/* @todo collapse icons need work */
+.collapse-icon > svg {
+  display: none;
+}
+.collapse-icon::before {
+  content: "↓";
+  opacity: 0.8;
+  transition: all 0.25s ease;
+  color: var(--light-2);
+  font-size: 0.875em;
+}
+.is-collapsed .collapse-icon::before {
+  content: "→";
+  opacity: 0.5;
+}
+
+.markdown-source-view .collapse-icon {
+  /* color: var(--text-faint); */
+  padding: 0.5rem;
+}
+.markdown-source-view .collapse-icon::before {
+  font-size: 1rem;
+  opacity: 0.6;
+}
+.markdown-source-view .is-collapsed .collapse-icon::before {
+  font-size: 1rem;
+  opacity: 0.3;
+}
+.markdown-source-view .cm-line .collapse-icon:hover::before {
+  opacity: 1;
+}

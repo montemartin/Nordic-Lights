@@ -1,0 +1,39 @@
+.workspace-tab-header {
+  flex: 1 1 auto;
+  min-width: 3rem;
+  max-width: 6rem;
+
+  &-container {
+    padding-top: 0;
+  }
+
+  &-container-inner {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    justify-content: center;
+    flex: 1 1 auto;
+  }
+
+  &-inner {
+    padding: 0;
+
+    &-icon {
+      line-height: 0;
+      // flex: 0 0 100%;
+      padding: 0 0.5rem;
+      margin: auto;
+
+      & svg {
+        height: 1.25rem;
+        width: 1.25rem;
+      }
+    }
+  }
+}
+
+.workspace-tabs .view-header {
+  margin: 0;
+  padding: 0 1rem;
+  border-bottom: 0;
+}
