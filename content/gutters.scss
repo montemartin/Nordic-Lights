@@ -1,0 +1,12 @@
+.cm-gutters {
+  --gutter-width: 2rem;
+
+  width: var(--gutter-width);
+  margin-inline-start: calc(var(--file-folding-offset) * -1) !important;
+  opacity: 0.1;
+  transition: opacity 0.25s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+}
