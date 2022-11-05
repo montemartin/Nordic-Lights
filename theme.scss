@@ -23,7 +23,7 @@
 
 // Below here still needs attention
 @use "content/checklists";
-@use "content/content";
+@use "content/links";
 @use "content/graph";
 @use "content/headings";
 @use "content/images";
@@ -31,5 +31,8 @@
 @use "content/tables";
 @use "content/tags";
 @use "content/typography";
+@use "content/footnote";
+@use "content/code";
 
+@use "components/tooltip";
 @use "components/statusbar";

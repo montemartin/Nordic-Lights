@@ -1,0 +1,37 @@
+:root {
+  --content-radius: 8px;
+  --content-padding-block: 0.5rem;
+  --content-padding-inline: 2px;
+}
+
+/**
+    Links
+*/
+.cm-s-obsidian span.cm-link,
+.cm-s-obsidian span.cm-hmd-internal-link {
+  color: var(--interactive-accent);
+}
+
+a,
+.cm-s-obsidian span.cm-url,
+.cm-hmd-internal-link {
+  color: var(--interactive-accent);
+  text-decoration: none;
+}
+
+.cm-s-obsidian span.cm-header.cm-url {
+  font-size: 65% !important;
+  font-weight: 400;
+}
+
+a:hover,
+.cm-hmd-internal-link:hover,
+.cm-s-obsidian span.cm-url:hover {
+  color: var(--interactive-accent-hover);
+  text-decoration: none;
+}
+
+.cm-hmd-internal-link,
+.cm-formatting-link {
+  font-style: normal;
+}

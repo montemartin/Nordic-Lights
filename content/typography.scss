@@ -1,6 +1,8 @@
 .cm-line {
-  font-weight: 325;
-  letter-spacing: 0.05ch;
+  -webkit-font-smoothing: auto;
+  font-family: var(--font-monospace);
+  font-weight: 375;
+  letter-spacing: -0.05ch;
 }
 .cm-inline-code,
 .cm-hmd-codeblock {
@@ -17,11 +19,33 @@
   font-weight: 300;
 }
 
-p {
-  margin: auto;
+.markdown-preview-view {
+  p {
+    margin: auto;
+  }
+  .heading-collapse-indicator {
+    margin-left: -2rem;
+    width: 2rem;
+  }
 }
 
-.markdown-preview-view .heading-collapse-indicator {
-  margin-left: -2rem;
-  width: 2rem;
+.markdown-rendered mark,
+.cm-s-obsidian span.cm-highlight {
+  /* Highlighted text */
+  display: inline;
+  color: var(--text-normal-reverse);
+  font-weight: 500;
+  padding: 2px;
+  line-height: calc(1.5em + 2px);
+}
+
+blockquote,
+.cm-s-obsidian span.cm-quote,
+pre.HyperMD-quote {
+  color: var(--text-blockquote);
+}
+
+.cm-hmd-frontmatter {
+  color: var(--text-faint);
+  font-size: 0.875rem;
 }

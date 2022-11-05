@@ -591,7 +591,6 @@ body {
   --font-text-theme: var(--font-sans);
   --font-interface-theme: var(--font-sans);
   --font-monospace-theme: var(--font-mono);
-  --highlight-mix-blend-mode: ;
   --opacity-translucency: 0.75;
   --mono-rgb-0: 255, 255, 255;
   --mono-rgb-100: 0, 0, 0;
@@ -1132,27 +1131,6 @@ body {
   --content-padding-inline: 2px;
 }
 
-/* Editor and Preview formatting */
-.cm-s-obsidian,
-.cm-s-obsidian .CodeMirror-code,
-.cm-s-obsidian .hmd-fold-html-stub,
-.cm-s-obsidian .hmd-fold-code-stub,
-.cm-s-obsidian.CodeMirror .HyperMD-hover > .HyperMD-hover-content code,
-.cm-s-obsidian .cm-formatting-hashtag,
-.cm-s-obsidian .cm-inline-code,
-.cm-s-obsidian .HyperMD-codeblock,
-.cm-s-obsidian .HyperMD-hr,
-.cm-s-obsidian .cm-hmd-frontmatter,
-.cm-s-obsidian .cm-hmd-orgmode-markup,
-.cm-s-obsidian .cm-formatting-code,
-.cm-s-obsidian .cm-math,
-.cm-s-obsidian span.hmd-fold-math-placeholder,
-.cm-s-obsidian .CodeMirror-linewidget kbd,
-.cm-s-obsidian .hmd-fold-html kbd {
-  -webkit-font-smoothing: auto;
-  font-family: var(--font-monospace);
-}
-
 /**
     Links
 */
@@ -1183,110 +1161,6 @@ a:hover,
 .cm-hmd-internal-link,
 .cm-formatting-link {
   font-style: normal;
-}
-
-blockquote,
-.cm-s-obsidian span.cm-quote,
-pre.HyperMD-quote {
-  color: var(--text-blockquote);
-}
-
-.markdown-preview-view mark,
-.cm-s-obsidian span.cm-formatting-highlight,
-.cm-s-obsidian span.cm-highlight {
-  /* Highlighted text */
-  color: var(--text-normal-reverse);
-  padding: 2px;
-}
-
-.cm-hmd-frontmatter {
-  color: var(--text-faint);
-  font-size: 0.875rem;
-}
-
-.cm-s-obsidian .HyperMD-footnote {
-  font-size: 0.75rem;
-  padding-left: 1rem;
-  line-height: 1rem;
-  overflow-y: auto;
-  max-height: 8em;
-}
-
-/* Code Blocks */
-.cm-s-obsidian .CodeMirror-line.HyperMD-codeblock {
-  padding-left: var(--content-padding-block);
-}
-
-.cm-s-obsidian span.cm-inline-code.cm-hmd-indented-code {
-  display: inline-block;
-  padding: 2px 4px;
-  background-color: var(--background-code);
-}
-
-.cm-s-obsidian div.HyperMD-codeblock-bg {
-  background-color: var(--background-code);
-  color: var(--text-code);
-}
-
-.cm-s-obsidian pre.HyperMD-codeblock-begin,
-.cm-s-obsidian pre.HyperMD-codeblock-begin-bg {
-  padding-top: var(--content-padding-block);
-}
-
-.cm-s-obsidian div.HyperMD-codeblock-begin-bg {
-  border-top-left-radius: var(--content-radius);
-  border-top-right-radius: var(--content-radius);
-}
-
-.cm-s-obsidian pre.HyperMD-codeblock-end,
-.cm-s-obsidian pre.HyperMD-codeblock-end-bg {
-  padding-top: var(--content-padding-block);
-}
-
-.cm-s-obsidian div.HyperMD-codeblock-end-bg {
-  border-bottom-left-radius: var(--content-radius);
-  border-bottom-right-radius: var(--content-radius);
-}
-
-/*  */
-/* Inline Code */
-/*  */
-.markdown-preview-section pre,
-.markdown-preview-section code {
-  font-size: 0.9em;
-  background-color: var(--background-code);
-  color: var(--text-code-inline);
-}
-
-.markdown-preview-section pre code {
-  /* Code blocks and indented code */
-  padding: 2px;
-  display: block;
-  color: var(--text-code);
-}
-
-.cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
-  background-color: inherit;
-}
-
-.cm-s-obsidian span.cm-inline-code,
-.cm-s-obsidian span.cm-hmd-indented-code {
-  color: var(--text-code-inline);
-  background-color: inherit;
-  font-size: 0.875rem;
-}
-
-.cm-s-obsidian .HyperMD-codeblock {
-  color: var(--color-red);
-}
-
-.tooltip {
-  background-color: var(--background-primary-alt);
-  border: 1px solid var(--light-3);
-}
-
-.tooltip-arrow {
-  display: none;
 }
 
 /* From built-in style sheet */
@@ -1839,8 +1713,10 @@ thead {
 }
 
 .cm-line {
-  font-weight: 325;
-  letter-spacing: 0.05ch;
+  -webkit-font-smoothing: auto;
+  font-family: var(--font-monospace);
+  font-weight: 375;
+  letter-spacing: -0.05ch;
 }
 
 .cm-inline-code,
@@ -1861,13 +1737,114 @@ thead {
   font-weight: 300;
 }
 
-p {
+.markdown-preview-view p {
   margin: auto;
 }
-
 .markdown-preview-view .heading-collapse-indicator {
   margin-left: -2rem;
   width: 2rem;
+}
+
+.markdown-rendered mark,
+.cm-s-obsidian span.cm-highlight {
+  /* Highlighted text */
+  display: inline;
+  color: var(--text-normal-reverse);
+  font-weight: 500;
+  padding: 2px;
+  line-height: calc(1.5em + 2px);
+}
+
+blockquote,
+.cm-s-obsidian span.cm-quote,
+pre.HyperMD-quote {
+  color: var(--text-blockquote);
+}
+
+.cm-hmd-frontmatter {
+  color: var(--text-faint);
+  font-size: 0.875rem;
+}
+
+.cm-s-obsidian .HyperMD-footnote {
+  font-size: 0.75rem;
+  padding-left: 1rem;
+  line-height: 1rem;
+  overflow-y: auto;
+  max-height: 8em;
+}
+
+.cm-s-obsidian .CodeMirror-line.HyperMD-codeblock {
+  padding-left: var(--content-padding-block);
+}
+
+.cm-s-obsidian span.cm-inline-code.cm-hmd-indented-code {
+  display: inline-block;
+  padding: 2px 4px;
+  background-color: var(--background-code);
+}
+
+.cm-s-obsidian div.HyperMD-codeblock-bg {
+  background-color: var(--background-code);
+  color: var(--text-code);
+}
+
+.cm-s-obsidian pre.HyperMD-codeblock-begin,
+.cm-s-obsidian pre.HyperMD-codeblock-begin-bg {
+  padding-top: var(--content-padding-block);
+}
+
+.cm-s-obsidian div.HyperMD-codeblock-begin-bg {
+  border-top-left-radius: var(--content-radius);
+  border-top-right-radius: var(--content-radius);
+}
+
+.cm-s-obsidian pre.HyperMD-codeblock-end,
+.cm-s-obsidian pre.HyperMD-codeblock-end-bg {
+  padding-top: var(--content-padding-block);
+}
+
+.cm-s-obsidian div.HyperMD-codeblock-end-bg {
+  border-bottom-left-radius: var(--content-radius);
+  border-bottom-right-radius: var(--content-radius);
+}
+
+.markdown-preview-section pre,
+.markdown-preview-section code {
+  font-size: 0.9em;
+  background-color: var(--background-code);
+  color: var(--text-code-inline);
+}
+
+.markdown-preview-section pre code {
+  /* Code blocks and indented code */
+  padding: 2px;
+  display: block;
+  color: var(--text-code);
+}
+
+.cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
+  background-color: inherit;
+}
+
+.cm-s-obsidian span.cm-inline-code,
+.cm-s-obsidian span.cm-hmd-indented-code {
+  color: var(--text-code-inline);
+  background-color: inherit;
+  font-size: 0.875rem;
+}
+
+.cm-s-obsidian .HyperMD-codeblock {
+  color: var(--color-red);
+}
+
+.tooltip {
+  background-color: var(--background-primary-alt);
+  border: 1px solid var(--light-3);
+}
+
+.tooltip-arrow {
+  display: none;
 }
 
 /* --------------- */
