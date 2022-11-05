@@ -1,0 +1,63 @@
+img {
+  display: inline;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.internal-embed,
+.image-embed {
+  display: block;
+  width: 100%;
+}
+
+.image-embed img {
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+}
+
+a.external-link[href$=".jpg"],
+a.external-link[href$=".png"] {
+  position: relative;
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+
+a.external-link[href$=".jpg"]:after,
+a.external-link[href$=".png"]:after {
+  content: "Image Link: " attr(href);
+  font-size: 0.6125rem;
+  font-style: italic;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: max-content;
+}
+
+img[src^="data:"] {
+  display: inline;
+  position: relative;
+  float: left;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+}
+
+img::after {
+  clear: both;
+  /* display: inline; */
+  content: " ";
+}
+
+.markdown-preview-view img {
+  max-width: 100%;
+  max-height: 600px;
+  object-fit: contain;
+  transition: all 0.5s ease;
+}
+/* @todo Working on way to make images expand on hover
+.markdown-preview-view img:hover {
+  max-width: unset;
+  max-height: unset;
+  height: 100%;
+}  */

@@ -997,4 +997,999 @@ body {
   opacity: 1;
 }
 
+/* @todo do some work on regular ul/ol lists */
+/* @todo add color to ellipse after folded list */
+/* @todo checklists aren't indenting correctly in live edit mode */
+/* Checklists */
+.markdown-source-view ul.contains-task-list {
+  padding-left: 0;
+  margin-top: 0.5rem;
+}
+
+.markdown-source-view div > ul.contains-task-list {
+  margin-top: 1rem;
+  color: var(--text-muted);
+}
+
+.markdown-source-view ul > li.task-list-item ul {
+  padding-left: 2rem;
+}
+
+.markdown-source-view ul > li.task-list-item {
+  margin-left: 3rem;
+  text-indent: unset;
+  font-size: 0.875rem;
+  font-style: italic;
+}
+
+.markdown-source-view ul > li.task-list-item p::first-line,
+.markdown-source-view ul > li.task-list-item::first-line {
+  color: var(--text-normal);
+  font-size: 1rem;
+  font-style: normal;
+}
+
+.markdown-source-view li.task-list-item + li.task-list-item {
+  margin-top: 0.5rem;
+}
+
+.markdown-source-view ul > li.task-list-item > ul.contains-task-list {
+  margin-left: -3rem;
+}
+
+.markdown-source-view .task-list-item-checkbox {
+  width: 0.75rem;
+  height: 0.75rem;
+  vertical-align: middle;
+  top: 0;
+  bottom: 0;
+  border: 1px solid var(--text-muted);
+  appearance: none;
+  filter: none;
+}
+
+.markdown-source-view .task-list-item-checkbox:checked {
+  background-color: var(--frost2);
+  box-shadow: inset 0 0 0 2px var(--background-primary);
+}
+
+.cm-hmd-list-indent {
+  letter-spacing: 0.5ch;
+}
+
+/***
+  Editor View
+
+  These styles apply in the Editor view only
+***/
+.cm-s-obsidian .HyperMD-list-line {
+  word-break: break-word;
+}
+
+.cm-s-obsidian .HyperMD-list-line-1:not(.HyperMD-list-line-nobullet) {
+  color: var(--text-normal);
+}
+
+.cm-s-obsidian .HyperMD-list-line.HyperMD-list-line-nobullet {
+  font-size: 0.875rem;
+  font-style: italic;
+  color: var(--text-faint);
+}
+
+.cm-formatting-task.cm-property ~ *:not(.cm-foldPlaceholder) {
+  /* Strikethrough completed checklist items in editor */
+  text-decoration: line-through !important;
+  color: var(--text-muted);
+}
+
+.markdown-source-view.mod-cm6 .cm-foldPlaceholder {
+  font-weight: 900;
+  font-family: var(--font-normal-preview);
+  font-size: 0.75rem;
+  color: 1px solid var(--text-faint);
+  border: 1px solid var(--text-muted);
+  opacity: 0.4;
+}
+
+.markdown-source-view.mod-cm6 .cm-foldPlaceholder:hover {
+  opacity: 1;
+}
+
+/* Experiments in coloring lines */
+/* @todo finish this experiment */
+:root {
+  --text-depth1: var(--text-normal);
+  --text-depth2: var(--frost3);
+  /* --text-depth3: var(--frost1);
+  --text-depth4: var(--frost0);
+  --text-depth5: var(--frost3);
+  --text-depth6: var(--color-purple); */
+}
+
+.cm-s-obsidian .HyperMD-list-line,
+.markdown-source-view .contains-task-list .task-list-item {
+  /* color: var(--text-depth2); */
+}
+
+.cm-s-obsidian .HyperMD-list-line-1,
+.markdown-source-view .contains-task-list .task-list-item {
+  /* color: var(--text-depth1); */
+}
+
+.cm-s-obsidian .HyperMD-list-line-2,
+.markdown-source-view .contains-task-list .task-list-item .task-list-item {
+  /* color: var(--text-depth2); */
+}
+
+.cm-s-obsidian .HyperMD-list-line-3,
+.markdown-source-view .contains-task-list .task-list-item .task-list-item .task-list-item {
+  /* filter: contrast(140%); */
+}
+
+:root {
+  --content-radius: 8px;
+  --content-padding-block: 0.5rem;
+  --content-padding-inline: 2px;
+}
+
+/* Editor and Preview formatting */
+.cm-s-obsidian,
+.cm-s-obsidian .CodeMirror-code,
+.cm-s-obsidian .hmd-fold-html-stub,
+.cm-s-obsidian .hmd-fold-code-stub,
+.cm-s-obsidian.CodeMirror .HyperMD-hover > .HyperMD-hover-content code,
+.cm-s-obsidian .cm-formatting-hashtag,
+.cm-s-obsidian .cm-inline-code,
+.cm-s-obsidian .HyperMD-codeblock,
+.cm-s-obsidian .HyperMD-hr,
+.cm-s-obsidian .cm-hmd-frontmatter,
+.cm-s-obsidian .cm-hmd-orgmode-markup,
+.cm-s-obsidian .cm-formatting-code,
+.cm-s-obsidian .cm-math,
+.cm-s-obsidian span.hmd-fold-math-placeholder,
+.cm-s-obsidian .CodeMirror-linewidget kbd,
+.cm-s-obsidian .hmd-fold-html kbd {
+  -webkit-font-smoothing: auto;
+  font-family: var(--font-monospace);
+}
+
+/**
+    Links
+*/
+.cm-s-obsidian span.cm-link,
+.cm-s-obsidian span.cm-hmd-internal-link {
+  color: var(--interactive-accent);
+}
+
+a,
+.cm-s-obsidian span.cm-url,
+.cm-hmd-internal-link {
+  color: var(--interactive-accent);
+  text-decoration: none;
+}
+
+.cm-s-obsidian span.cm-header.cm-url {
+  font-size: 65% !important;
+  font-weight: 400;
+}
+
+a:hover,
+.cm-hmd-internal-link:hover,
+.cm-s-obsidian span.cm-url:hover {
+  color: var(--interactive-accent-hover);
+  text-decoration: none;
+}
+
+.cm-hmd-internal-link,
+.cm-formatting-link {
+  font-style: normal;
+}
+
+blockquote,
+.cm-s-obsidian span.cm-quote,
+pre.HyperMD-quote {
+  color: var(--text-blockquote);
+}
+
+.markdown-preview-view mark,
+.cm-s-obsidian span.cm-formatting-highlight,
+.cm-s-obsidian span.cm-highlight {
+  /* Highlighted text */
+  color: var(--text-normal-reverse);
+  padding: 2px;
+}
+
+.cm-hmd-frontmatter {
+  color: var(--text-faint);
+  font-size: 0.875rem;
+}
+
+.cm-s-obsidian .HyperMD-footnote {
+  font-size: 0.75rem;
+  padding-left: 1rem;
+  line-height: 1rem;
+  overflow-y: auto;
+  max-height: 8em;
+}
+
+/* Code Blocks */
+.cm-s-obsidian .CodeMirror-line.HyperMD-codeblock {
+  padding-left: var(--content-padding-block);
+}
+
+.cm-s-obsidian span.cm-inline-code.cm-hmd-indented-code {
+  display: inline-block;
+  padding: 2px 4px;
+  background-color: var(--background-code);
+}
+
+.cm-s-obsidian div.HyperMD-codeblock-bg {
+  background-color: var(--background-code);
+  color: var(--text-code);
+}
+
+.cm-s-obsidian pre.HyperMD-codeblock-begin,
+.cm-s-obsidian pre.HyperMD-codeblock-begin-bg {
+  padding-top: var(--content-padding-block);
+}
+
+.cm-s-obsidian div.HyperMD-codeblock-begin-bg {
+  border-top-left-radius: var(--content-radius);
+  border-top-right-radius: var(--content-radius);
+}
+
+.cm-s-obsidian pre.HyperMD-codeblock-end,
+.cm-s-obsidian pre.HyperMD-codeblock-end-bg {
+  padding-top: var(--content-padding-block);
+}
+
+.cm-s-obsidian div.HyperMD-codeblock-end-bg {
+  border-bottom-left-radius: var(--content-radius);
+  border-bottom-right-radius: var(--content-radius);
+}
+
+/*  */
+/* Inline Code */
+/*  */
+.markdown-preview-section pre,
+.markdown-preview-section code {
+  font-size: 0.9em;
+  background-color: var(--background-code);
+  color: var(--text-code-inline);
+}
+
+.markdown-preview-section pre code {
+  /* Code blocks and indented code */
+  padding: 2px;
+  display: block;
+  color: var(--text-code);
+}
+
+.cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
+  background-color: inherit;
+}
+
+.cm-s-obsidian span.cm-inline-code,
+.cm-s-obsidian span.cm-hmd-indented-code {
+  color: var(--text-code-inline);
+  background-color: inherit;
+  font-size: 0.875rem;
+}
+
+.cm-s-obsidian .HyperMD-codeblock {
+  color: var(--color-red);
+}
+
+.tooltip {
+  background-color: var(--background-primary-alt);
+  border: 1px solid var(--light-3);
+}
+
+.tooltip-arrow {
+  display: none;
+}
+
+/* From built-in style sheet */
+/*  Addtional info https://forum.obsidian.md/t/is-there-a-way-to-change-the-color-of-the-nodes-in-graph-view/8271/2 */
+.graph-view.color-fill-unresolved {
+  color: var(--dark3);
+  opacity: 1;
+}
+
+.graph-view.color-fill {
+  color: var(--interactive-accent);
+}
+
+.graph-view.color-fill-1 {
+  color: var(--text-heading-1);
+}
+
+.graph-view.color-fill-2 {
+  color: var(--text-heading-2);
+}
+
+.graph-view.color-fill-3 {
+  color: var(--text-heading-3);
+}
+
+.graph-view.color-fill-4 {
+  color: var(--text-heading-4);
+}
+
+.graph-view.color-fill-5 {
+  color: var(--text-heading-5);
+}
+
+.graph-view.color-fill-6 {
+  color: var(--text-heading-6);
+}
+
+.graph-view.color-arrow {
+  color: var(--interactive-accent);
+  opacity: 1;
+}
+
+.graph-view.color-circle {
+  color: var(--text-normal);
+}
+
+.graph-view.color-line {
+  color: var(--background-modifier-border);
+}
+
+.graph-view.color-text {
+  color: var(--text-normal);
+}
+
+.graph-view.color-fill-highlight {
+  color: var(--interactive-accent);
+}
+
+/* Graph Controls */
+/* @todo fix controls so they are accessible when scrolled down  */
+.graph-controls {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  padding: 8px 16px 8px 8px;
+  background-color: var(--background-primary-alt);
+  min-width: 140px;
+  max-width: 240px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+  max-height: calc(100% - 16px);
+  overflow: auto;
+}
+
+.graph-controls.is-close {
+  min-width: inherit;
+  background-color: var(--background-primary);
+  border: 1px solid transparent;
+  padding: 6px 8px 2px 8px;
+}
+
+.graph-controls.is-close > .graph-control-section {
+  display: none;
+}
+
+.graph-controls input[type=text],
+.graph-controls input[type=range] {
+  width: 100%;
+  font-size: 14px;
+}
+
+.graph-controls .setting-item {
+  padding: 10px 0;
+}
+
+.graph-controls .setting-item:first-of-type {
+  border-top: none;
+}
+
+.graph-controls .setting-item.mod-slider,
+.graph-controls .setting-item.mod-search-setting {
+  flex-direction: column;
+}
+
+.graph-controls .setting-item.mod-slider > *,
+.graph-controls .setting-item.mod-search-setting > * {
+  width: 100%;
+}
+
+.graph-controls .setting-item.mod-slider .setting-item-info,
+.graph-controls .setting-item.mod-search-setting .setting-item-info {
+  margin-right: 0;
+}
+
+.graph-controls .setting-item.mod-slider .setting-item-control,
+.graph-controls .setting-item.mod-search-setting .setting-item-control {
+  padding-top: 4px;
+}
+
+.graph-controls .setting-item.mod-toggle .setting-item-control {
+  padding-top: 0;
+  margin-top: -3px;
+}
+
+.graph-controls .setting-item.mod-search-setting .setting-item-info {
+  margin-right: 0;
+}
+
+.graph-controls .setting-item-name {
+  font-size: 14px;
+  color: var(--text-muted);
+  display: inline-block;
+}
+
+.graph-controls .tree-item-children {
+  margin-top: 8px;
+}
+
+.graph-controls::-webkit-scrollbar,
+.graph-controls::-webkit-scrollbar-thumb {
+  width: 8px;
+  visibility: hidden;
+}
+
+.graph-controls:hover::-webkit-scrollbar,
+.graph-controls:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+
+.graph-controls .graph-color-group {
+  display: flex;
+  align-items: center;
+  margin: 0 0 10px 0;
+}
+
+.graph-controls .graph-color-group input[type=color] {
+  height: 26px;
+  margin-left: 6px;
+}
+
+.graph-controls .graph-color-group input[type=color]::-webkit-color-swatch {
+  height: 18px;
+  width: 18px;
+}
+
+.graph-controls .graph-color-group .clickable-icon {
+  display: inline-flex;
+}
+
+.graph-controls .graph-color-button-container {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.graph-controls .graph-color-button-container button {
+  margin: 0;
+}
+
+.graph-controls-button {
+  color: var(--text-faint);
+  cursor: pointer;
+  display: none;
+  z-index: 1;
+}
+
+.graph-controls-button:hover {
+  color: var(--text-muted);
+}
+
+.graph-controls-button.mod-close {
+  position: absolute;
+  top: 5px;
+  right: 6px;
+}
+
+.graph-controls:not(.is-close):hover .graph-controls-button.mod-close {
+  display: inline-block;
+}
+
+.graph-controls-button.mod-reset {
+  position: absolute;
+  top: 5px;
+  right: 30px;
+}
+
+.graph-controls:not(.is-close):hover .graph-controls-button.mod-reset {
+  display: inline-block;
+}
+
+.graph-controls.is-close .graph-controls-button.mod-open {
+  display: inline-block;
+}
+
+.setting-item.mod-search-setting .setting-item-info {
+  display: none;
+}
+
+.setting-item.mod-search-setting .setting-item-control .search-input-container {
+  position: relative;
+  margin: 0;
+}
+
+.setting-item.mod-search-setting .setting-item-control .search-input-container:before {
+  content: " ";
+  position: absolute;
+  bottom: -6px;
+  width: 0;
+  height: 3px;
+}
+
+.setting-item.mod-search-setting.is-loading .setting-item-control:before {
+  background-color: var(--interactive-accent);
+  animation: 1000ms ease-in-out 300ms infinite progress-bar;
+}
+
+.graph-controls-currently-searching {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 10px;
+  line-height: 18px;
+}
+
+.graph-control-section-header {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-normal);
+}
+
+.graph-control-section:not(:last-child) .tree-item-children {
+  margin-top: 8px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.graph-controls {
+  padding-bottom: 12px;
+}
+
+.local-graph-jumps-slider-container {
+  position: absolute;
+  left: 14px;
+  top: 10px;
+  padding: 0 8px 4px 8px;
+  border-radius: 4px;
+  background-color: var(--background-primary);
+}
+
+.mermaid .note {
+  fill: var(--frost3);
+}
+
+.markdown-preview-section h1,
+.markdown-preview-section h2,
+.markdown-preview-section h3,
+.markdown-preview-section h4,
+.markdown-preview-section h5,
+.markdown-preview-section h6,
+.cm-header {
+  letter-spacing: 0.05ch;
+  font-family: var(--font-serif);
+  margin-top: 0.5em;
+}
+
+/* Function test */
+h1,
+.markdown-rendered h1,
+.HyperMD-header-1,
+.HyperMD-list-line .cm-header-1 {
+  font-size: 1.5rem;
+  font-weight: 750;
+  font-variation-settings: "opsz" 20;
+  color: var(--color-green);
+}
+
+h1,
+.markdown-rendered h1,
+.HyperMD-header-1,
+.HyperMD-list-line .cm-header-1 {
+  font-size: 1.5rem;
+  font-weight: 750;
+  font-variation-settings: "opsz" 20;
+  color: var(--color-green);
+}
+
+body {
+  --heading-formatting: var(--text-faint);
+  --h6-weight: 600;
+  --h6-variant: normal;
+  --h6-style: normal;
+  --h6-size: 1.12em;
+  --h6-line-height: var(--line-height-normal);
+  --h6-font: inherit;
+  --h6-color: inherit;
+  --h5-weight: 600;
+  --h5-variant: normal;
+  --h5-style: normal;
+  --h5-size: 1.12em;
+  --h5-line-height: var(--line-height-normal);
+  --h5-font: inherit;
+  --h5-color: inherit;
+  --h4-weight: 600;
+  --h4-variant: normal;
+  --h4-style: normal;
+  --h4-size: 1.25em;
+  --h4-line-height: 1.4;
+  --h4-font: inherit;
+  --h4-color: inherit;
+  --h3-weight: 600;
+  --h3-variant: normal;
+  --h3-style: normal;
+  --h3-size: 1.37em;
+  --h3-line-height: 1.3;
+  --h3-font: inherit;
+  --h3-color: inherit;
+  --h2-weight: 600;
+  --h2-variant: normal;
+  --h2-style: normal;
+  --h2-size: 1.6em;
+  --h2-line-height: 1.2;
+  --h2-font: inherit;
+  --h2-color: inherit;
+  --h1-weight: 700;
+  --h1-variant: normal;
+  --h1-style: normal;
+  --h1-size: 2em;
+  --h1-line-height: 1.2;
+  --h1-font: inherit;
+  --h1-color: inherit;
+}
+
+img {
+  display: inline;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.internal-embed,
+.image-embed {
+  display: block;
+  width: 100%;
+}
+
+.image-embed img {
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+}
+
+a.external-link[href$=".jpg"],
+a.external-link[href$=".png"] {
+  position: relative;
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+
+a.external-link[href$=".jpg"]:after,
+a.external-link[href$=".png"]:after {
+  content: "Image Link: " attr(href);
+  font-size: 0.6125rem;
+  font-style: italic;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: max-content;
+}
+
+img[src^="data:"] {
+  display: inline;
+  position: relative;
+  float: left;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+}
+
+img::after {
+  clear: both;
+  /* display: inline; */
+  content: " ";
+}
+
+.markdown-preview-view img {
+  max-width: 100%;
+  max-height: 600px;
+  object-fit: contain;
+  transition: all 0.5s ease;
+}
+
+/* @todo Working on way to make images expand on hover
+.markdown-preview-view img:hover {
+  max-width: unset;
+  max-height: unset;
+  height: 100%;
+}  */
+.search-result {
+  margin-bottom: 0;
+}
+
+.search-result-file-matched-text {
+  color: var(--text-normal-reverse);
+  background-color: var(--color-yellow);
+}
+
+.search-result-file-matches {
+  border-bottom: 0;
+  margin-bottom: 0.25rem;
+  color: var(--text-faint);
+}
+
+.search-result-file-match.search-info-more-matches {
+  color: var(--interactive-accent);
+  border-bottom: 1px solid var(--background-modifier-border);
+  padding-bottom: 0.5rem;
+}
+
+.search-result-file-match:after {
+  display: none;
+}
+
+.search-empty-state {
+  font-size: 0.875rem;
+  font-style: italic;
+  color: var(--text-faint);
+}
+
+.search-result-file-title {
+  font-size: 0.875rem;
+  color: var(--text-normal);
+}
+
+.is-embed .search-result-file-matched-text {
+  color: inherit;
+  background-color: inherit;
+}
+
+/* Highlight for searches within editor panes */
+.cm-s-obsidian span.obsidian-search-match-highlight {
+  color: var(--color-yellow);
+  padding: 1px;
+  border: 2px solid var(--color-red);
+  background: var(--dark2);
+}
+
+.markdown-preview-view .internal-query.is-embed .internal-query-header {
+  display: none;
+}
+
+.markdown-preview-view .internal-query.is-embed .search-results-children {
+  padding: 0;
+  max-height: none;
+}
+
+.markdown-preview-view .internal-query.is-embed {
+  margin: 0;
+  border-top: 0;
+  border-bottom: 1px solid var(--color-green);
+}
+
+.suggestion-highlight {
+  font-weight: inherit;
+  color: var(--color-yellow);
+}
+
+th {
+  font-weight: 600;
+}
+
+thead {
+  border-bottom: 2px solid var(--background-modifier-border);
+}
+
+.HyperMD-table-row {
+  line-height: normal;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.HyperMD-table-row-0 {
+  /* padding-top: 4px; */
+}
+
+.cm-s-obsidian span.cm-hashtag {
+  color: var(--text-faint);
+}
+
+.cm-hashtag {
+  background-color: var(--background-secondary-alt);
+  font-size: 0.75em;
+  line-height: inherit;
+  font-style: normal;
+  vertical-align: middle !important;
+}
+
+.cm-s-obsidian span.cm-tag-s,
+.cm-s-obsidian span.cm-tag-e,
+.cm-s-obsidian span.cm-tag-n,
+.cm-s-obsidian span.cm-tag-v,
+.tag[href^="#/"] {
+  background-color: var(--color-blue);
+  filter: brightness(70%);
+  color: var(--text-normal);
+}
+
+.tag[href^="#//"] {
+  background-color: var(--background-secondary-alt);
+  filter: brightness(80%);
+}
+
+.cm-s-obsidian span.cm-tag-next,
+.tag[href*="#//next"] {
+  color: var(--color-yellow);
+}
+
+.cm-s-obsidian span.cm-tag-active,
+.tag[class~="#//active"] {
+  color: var(--color-green);
+}
+
+.cm-s-obsidian span[class*=cm-tag--due],
+.tag[href*=-due] {
+  color: var(--color-red);
+}
+
+.cm-s-obsidian span.cm-tag-done,
+.tag[href*="#//done"] {
+  color: var(--frost0);
+}
+
+.cm-s-obsidian span.cm-tag-priority,
+.tag[href*="#--priority/1"] {
+  color: var(--color-red);
+}
+
+.cm-tag--waitingOn ~ * {
+  color: var(--dark3);
+}
+
+.cm-s-obsidian .cm-header-1 {
+  font-size: 1.5rem;
+  font-weight: 750;
+  font-variation-settings: "opsz" 20;
+}
+
+.cm-s-obsidian .cm-header-2 {
+  font-size: 1.3625rem;
+  font-weight: 625;
+  font-variation-settings: "opsz" 16;
+}
+
+.cm-s-obsidian .cm-header-3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-variation-settings: "opsz" 14;
+}
+
+.cm-s-obsidian .cm-header-4,
+.cm-s-obsidian .cm-header-5 {
+  font-size: 1.125rem;
+  font-weight: 425;
+  font-variation-settings: "opsz" 10;
+}
+
+.cm-s-obsidian .cm-header-6 {
+  font-weight: 375;
+  font-variation-settings: "opsz" 8;
+}
+
+.cm-line {
+  font-weight: 325;
+  letter-spacing: 0.05ch;
+}
+
+.cm-inline-code,
+.cm-hmd-codeblock {
+  letter-spacing: 0;
+}
+
+.cm-formatting {
+  letter-spacing: -0.1ch;
+  display: inline-block;
+}
+
+.cm-formatting-strong {
+  color: inherit;
+}
+
+.cm-s-obsidian .cm-header.cm-formatting-link {
+  font-weight: 300;
+}
+
+.cm-header-1,
+.markdown-preview-section h1 {
+  color: var(--text-heading-1);
+}
+
+.cm-header-2,
+.markdown-preview-section h2 {
+  color: var(--text-heading-2);
+}
+
+.cm-header-3,
+.markdown-preview-section h3 {
+  color: var(--text-heading-3);
+}
+
+.cm-header-4,
+.markdown-preview-section h4 {
+  color: var(--text-heading-4);
+}
+
+.cm-header-5,
+.markdown-preview-section h5 {
+  color: var(--text-heading-5);
+}
+
+.cm-header-6,
+.markdown-preview-section h6 {
+  color: var(--text-heading-6);
+}
+
+.markdown-preview-section h1 {
+  font-size: 1.75rem;
+}
+
+.markdown-preview-section h2 {
+  font-size: 1.5rem;
+}
+
+.markdown-preview-section h3 {
+  font-size: 1.375rem;
+}
+
+.markdown-preview-section h4 {
+  font-size: 1.25rem;
+}
+
+.markdown-preview-section h5 {
+  font-size: 1.125rem;
+}
+
+.markdown-preview-section h6 {
+  font-size: 1rem;
+}
+
+/* --------------- */
+/* Status bar */
+/* --------------- */
+.status-bar {
+  transition: color 200ms linear;
+  color: var(--text-muted);
+  line-height: 1;
+}
+
+.status-bar {
+  background-color: transparent;
+  z-index: 30;
+  width: auto;
+  position: absolute;
+  left: auto;
+  border: 0;
+  bottom: 0;
+  right: 0;
+  max-height: unset;
+  padding-right: 30px;
+}
+
+.status-bar:hover {
+  color: var(--text-faint);
+  transition: color 200ms linear;
+}
+
+.status-bar > .status-bar-item:first-of-type {
+  flex-grow: 1;
+}
+
+.status-bar-item.mod-clickable:hover {
+  color: var(--text-normal);
+}
+
+.status-bar-item {
+  display: flex;
+  align-items: center;
+  line-height: 2;
+}
+
 /*# sourceMappingURL=theme.css.map */

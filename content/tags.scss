@@ -1,0 +1,56 @@
+.cm-s-obsidian span.cm-hashtag {
+  color: var(--text-faint);
+}
+
+.cm-hashtag {
+  background-color: var(--background-secondary-alt);
+  font-size: 0.75em;
+  line-height: inherit;
+  font-style: normal;
+  vertical-align: middle !important;
+}
+.cm-formatting-hashtag {
+}
+
+.cm-s-obsidian span.cm-tag-s,
+.cm-s-obsidian span.cm-tag-e,
+.cm-s-obsidian span.cm-tag-n,
+.cm-s-obsidian span.cm-tag-v,
+.tag[href^="#/"] {
+  background-color: var(--color-blue);
+  filter: brightness(70%);
+  color: var(--text-normal);
+}
+
+.tag[href^="#//"]
+{
+  background-color: var(--background-secondary-alt);
+  filter: brightness(80%);
+}
+.cm-s-obsidian span.cm-tag-next,
+.tag[href*="#//next"]
+{
+  color: var(--color-yellow);
+}
+.cm-s-obsidian span.cm-tag-active,
+.tag[class~="#//active"]
+{
+  color: var(--color-green);
+}
+.cm-s-obsidian span[class*="cm-tag--due"],
+.tag[href*="-due"] {
+  color: var(--color-red);
+}
+.cm-s-obsidian span.cm-tag-done,
+.tag[href*="#//done"]
+{
+  color: var(--frost0);
+}
+.cm-s-obsidian span.cm-tag-priority,
+.tag[href*="#--priority/1"] {
+  color: var(--color-red);
+}
+
+.cm-tag--waitingOn ~ * {
+  color: var(--dark3);
+}

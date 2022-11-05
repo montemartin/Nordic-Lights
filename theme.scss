@@ -13,21 +13,23 @@
 @use "content/view-header";
 @use "content/view-content";
 @use "content/gutters";
-// @use "content/content";
-// @use "content/checklists";
-// @use "content/headings";
-// @use "content/typography";
-
-// @use "content/graph";
-// @use "content/images";
-// @use "content/search";
-// @use "content/tables";
-// @use "content/tags";
 
 @use "components/icons";
 @use "components/nav";
 @use "components/modal";
-// @use "components/statusbar";
 
 @use "features/hide_ribbon";
 @use "features/dim_inactive_panes";
+
+// Below here still needs attention
+@use "content/checklists";
+@use "content/content";
+@use "content/graph";
+@use "content/headings";
+@use "content/images";
+@use "content/search";
+@use "content/tables";
+@use "content/tags";
+@use "content/typography";
+
+@use "components/statusbar";

@@ -1,0 +1,65 @@
+.search-result {
+  margin-bottom: 0;
+}
+
+.search-result-file-matched-text {
+  color: var(--text-normal-reverse);
+  background-color: var(--color-yellow);
+}
+.search-result-file-matches {
+  border-bottom: 0;
+  margin-bottom: 0.25rem;
+  color: var(--text-faint);
+}
+.search-result-file-match.search-info-more-matches {
+  color: var(--interactive-accent);
+  border-bottom: 1px solid var(--background-modifier-border);
+  padding-bottom: 0.5rem;
+}
+
+.search-result-file-match:after {
+  display: none;
+}
+.search-empty-state {
+  font-size: 0.875rem;
+  font-style: italic;
+  color: var(--text-faint);
+}
+
+.search-result-file-title {
+  font-size: 0.875rem;
+  color: var(--text-normal);
+}
+
+.is-embed .search-result-file-matched-text {
+  color: inherit;
+  background-color: inherit;
+}
+
+/* Highlight for searches within editor panes */
+.cm-s-obsidian span.obsidian-search-match-highlight {
+  color: var(--color-yellow);
+  padding: 1px;
+  border: 2px solid var(--color-red);
+  background: var(--dark2);
+}
+
+.markdown-preview-view .internal-query.is-embed .internal-query-header {
+  display: none;
+}
+
+.markdown-preview-view .internal-query.is-embed .search-results-children {
+  padding: 0;
+  max-height: none;
+}
+
+.markdown-preview-view .internal-query.is-embed {
+  margin: 0;
+  border-top: 0;
+  border-bottom: 1px solid var(--color-green);
+}
+
+.suggestion-highlight {
+  font-weight: inherit;
+  color: var(--color-yellow);
+}

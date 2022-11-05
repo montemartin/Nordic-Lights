@@ -1,0 +1,221 @@
+/* From built-in style sheet */
+/*  Addtional info https://forum.obsidian.md/t/is-there-a-way-to-change-the-color-of-the-nodes-in-graph-view/8271/2 */
+.graph-view.color-fill-unresolved {
+  color: var(--dark3);
+  opacity: 1;
+}
+.graph-view.color-fill {
+  color: var(--interactive-accent);
+}
+.graph-view.color-fill-1 {
+  color: var(--text-heading-1);
+}
+.graph-view.color-fill-2 {
+  color: var(--text-heading-2);
+}
+.graph-view.color-fill-3 {
+  color: var(--text-heading-3);
+}
+.graph-view.color-fill-4 {
+  color: var(--text-heading-4);
+}
+.graph-view.color-fill-5 {
+  color: var(--text-heading-5);
+}
+.graph-view.color-fill-6 {
+  color: var(--text-heading-6);
+}
+.graph-view.color-arrow {
+  color: var(--interactive-accent);
+  opacity: 1;
+}
+.graph-view.color-circle {
+  color: var(--text-normal);
+}
+.graph-view.color-line {
+  color: var(--background-modifier-border);
+}
+.graph-view.color-text {
+  color: var(--text-normal);
+}
+.graph-view.color-fill-highlight {
+  color: var(--interactive-accent);
+}
+
+/* Graph Controls */
+/* @todo fix controls so they are accessible when scrolled down  */
+.graph-controls {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  padding: 8px 16px 8px 8px;
+  background-color: var(--background-primary-alt);
+  min-width: 140px;
+  max-width: 240px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+  max-height: calc(100% - 16px);
+  overflow: auto;
+}
+.graph-controls.is-close {
+  min-width: inherit;
+  background-color: var(--background-primary);
+  border: 1px solid transparent;
+  padding: 6px 8px 2px 8px;
+}
+.graph-controls.is-close > .graph-control-section {
+  display: none;
+}
+.graph-controls input[type="text"],
+.graph-controls input[type="range"] {
+  width: 100%;
+  font-size: 14px;
+}
+.graph-controls .setting-item {
+  padding: 10px 0;
+}
+.graph-controls .setting-item:first-of-type {
+  border-top: none;
+}
+.graph-controls .setting-item.mod-slider,
+.graph-controls .setting-item.mod-search-setting {
+  flex-direction: column;
+}
+.graph-controls .setting-item.mod-slider > *,
+.graph-controls .setting-item.mod-search-setting > * {
+  width: 100%;
+}
+.graph-controls .setting-item.mod-slider .setting-item-info,
+.graph-controls .setting-item.mod-search-setting .setting-item-info {
+  margin-right: 0;
+}
+.graph-controls .setting-item.mod-slider .setting-item-control,
+.graph-controls .setting-item.mod-search-setting .setting-item-control {
+  padding-top: 4px;
+}
+.graph-controls .setting-item.mod-toggle .setting-item-control {
+  padding-top: 0;
+  margin-top: -3px;
+}
+.graph-controls .setting-item.mod-search-setting .setting-item-info {
+  margin-right: 0;
+}
+.graph-controls .setting-item-name {
+  font-size: 14px;
+  color: var(--text-muted);
+  display: inline-block;
+}
+.graph-controls .tree-item-children {
+  margin-top: 8px;
+}
+.graph-controls::-webkit-scrollbar,
+.graph-controls::-webkit-scrollbar-thumb {
+  width: 8px;
+  visibility: hidden;
+}
+.graph-controls:hover::-webkit-scrollbar,
+.graph-controls:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+.graph-controls .graph-color-group {
+  display: flex;
+  align-items: center;
+  margin: 0 0 10px 0;
+}
+.graph-controls .graph-color-group input[type="color"] {
+  height: 26px;
+  margin-left: 6px;
+}
+.graph-controls .graph-color-group input[type="color"]::-webkit-color-swatch {
+  height: 18px;
+  width: 18px;
+}
+.graph-controls .graph-color-group .clickable-icon {
+  display: inline-flex;
+}
+.graph-controls .graph-color-button-container {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.graph-controls .graph-color-button-container button {
+  margin: 0;
+}
+.graph-controls-button {
+  color: var(--text-faint);
+  cursor: pointer;
+  display: none;
+  z-index: 1;
+}
+.graph-controls-button:hover {
+  color: var(--text-muted);
+}
+.graph-controls-button.mod-close {
+  position: absolute;
+  top: 5px;
+  right: 6px;
+}
+.graph-controls:not(.is-close):hover .graph-controls-button.mod-close {
+  display: inline-block;
+}
+.graph-controls-button.mod-reset {
+  position: absolute;
+  top: 5px;
+  right: 30px;
+}
+.graph-controls:not(.is-close):hover .graph-controls-button.mod-reset {
+  display: inline-block;
+}
+.graph-controls.is-close .graph-controls-button.mod-open {
+  display: inline-block;
+}
+.setting-item.mod-search-setting .setting-item-info {
+  display: none;
+}
+.setting-item.mod-search-setting .setting-item-control .search-input-container {
+  position: relative;
+  margin: 0;
+}
+.setting-item.mod-search-setting
+  .setting-item-control
+  .search-input-container:before {
+  content: " ";
+  position: absolute;
+  bottom: -6px;
+  width: 0;
+  height: 3px;
+}
+.setting-item.mod-search-setting.is-loading .setting-item-control:before {
+  background-color: var(--interactive-accent);
+  animation: 1000ms ease-in-out 300ms infinite progress-bar;
+}
+.graph-controls-currently-searching {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 10px;
+  line-height: 18px;
+}
+.graph-control-section-header {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-normal);
+}
+.graph-control-section:not(:last-child) .tree-item-children {
+  margin-top: 8px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+.graph-controls {
+  padding-bottom: 12px;
+}
+.local-graph-jumps-slider-container {
+  position: absolute;
+  left: 14px;
+  top: 10px;
+  padding: 0 8px 4px 8px;
+  border-radius: 4px;
+  background-color: var(--background-primary);
+}
+
+.mermaid .note {
+  fill: var(--frost3);
+}

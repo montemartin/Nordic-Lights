@@ -1,0 +1,143 @@
+/* @todo do some work on regular ul/ol lists */
+/* @todo add color to ellipse after folded list */
+/* @todo checklists aren't indenting correctly in live edit mode */
+/* Checklists */
+.markdown-source-view ul.contains-task-list {
+  padding-left: 0;
+  margin-top: 0.5rem;
+}
+.markdown-source-view div > ul.contains-task-list {
+  margin-top: 1rem;
+  color: var(--text-muted);
+}
+.markdown-source-view ul > li.task-list-item ul {
+  padding-left: 2rem;
+}
+.markdown-source-view ul > li.task-list-item {
+  margin-left: 3rem;
+  text-indent: unset;
+  font-size: 0.875rem;
+  font-style: italic;
+}
+.markdown-source-view ul > li.task-list-item p::first-line,
+.markdown-source-view ul > li.task-list-item::first-line {
+  color: var(--text-normal);
+  font-size: 1rem;
+  font-style: normal;
+}
+.markdown-source-view li.task-list-item + li.task-list-item {
+  margin-top: 0.5rem;
+}
+.markdown-source-view ul > li.task-list-item > ul.contains-task-list {
+  margin-left: -3rem;
+}
+
+.markdown-source-view .task-list-item-checkbox {
+  width: 0.75rem;
+  height: 0.75rem;
+  vertical-align: middle;
+  top: 0;
+  bottom: 0;
+  border: 1px solid var(--text-muted);
+  appearance: none;
+  filter: none;
+}
+.markdown-source-view .task-list-item-checkbox:checked {
+  background-color: var(--frost2);
+  box-shadow: inset 0 0 0 2px var(--background-primary);
+}
+
+.cm-hmd-list-indent {
+  letter-spacing: 0.5ch;
+}
+
+/***
+  Editor View
+
+  These styles apply in the Editor view only
+***/
+.cm-s-obsidian .HyperMD-list-line {
+  word-break: break-word;
+}
+.cm-s-obsidian .HyperMD-list-line-1:not(.HyperMD-list-line-nobullet) {
+  color: var(--text-normal);
+}
+.cm-s-obsidian .HyperMD-list-line.HyperMD-list-line-nobullet {
+  font-size: 0.875rem;
+  font-style: italic;
+  color: var(--text-faint);
+}
+.cm-formatting-task.cm-property ~ *:not(.cm-foldPlaceholder) {
+  /* Strikethrough completed checklist items in editor */
+  text-decoration: line-through !important;
+  color: var(--text-muted);
+}
+.markdown-source-view.mod-cm6 .cm-foldPlaceholder {
+  font-weight: 900;
+  font-family: var(--font-normal-preview);
+  font-size: 0.75rem;
+  color: 1px solid var(--text-faint);
+  border: 1px solid var(--text-muted);
+  opacity: 0.4;
+}
+.markdown-source-view.mod-cm6 .cm-foldPlaceholder:hover {
+  opacity: 1;
+}
+
+/* Experiments in coloring lines */
+/* @todo finish this experiment */
+:root {
+  --text-depth1: var(--text-normal);
+  --text-depth2: var(--frost3);
+  /* --text-depth3: var(--frost1);
+  --text-depth4: var(--frost0);
+  --text-depth5: var(--frost3);
+  --text-depth6: var(--color-purple); */
+}
+.cm-s-obsidian .HyperMD-list-line,
+.markdown-source-view .contains-task-list .task-list-item {
+  /* color: var(--text-depth2); */
+}
+.cm-s-obsidian .HyperMD-list-line-1,
+.markdown-source-view .contains-task-list .task-list-item {
+  /* color: var(--text-depth1); */
+}
+.cm-s-obsidian .HyperMD-list-line-2,
+.markdown-source-view .contains-task-list .task-list-item .task-list-item {
+  /* color: var(--text-depth2); */
+}
+.cm-s-obsidian .HyperMD-list-line-3,
+.markdown-source-view
+  .contains-task-list
+  .task-list-item
+  .task-list-item
+  .task-list-item {
+  /* filter: contrast(140%); */
+}
+.cm-s-obsidian .HyperMD-list-line-4,
+.markdown-source-view
+  .contains-task-list
+  .task-list-item
+  .task-list-item
+  .task-list-item
+  .task-list-item {
+}
+.cm-s-obsidian .HyperMD-list-line-5,
+.markdown-source-view
+  .contains-task-list
+  .task-list-item
+  .task-list-item
+  .task-list-item
+  .task-list-item
+  .task-list-item {
+}
+.cm-s-obsidian .HyperMD-list-line-6,
+.markdown-source-view
+  .contains-task-list
+  .task-list-item
+  .task-list-item
+  .task-list-item
+  .task-list-item
+  .task-list-item
+  .task-list-item {
+}
