@@ -39,23 +39,62 @@
   }
 }
 
-.nav-file-title-content {
-  font-family: var(--font-monospace);
-  color: var(--color-yellow);
-  font-weight: 325;
-  font-size: 0.75rem;
-  letter-spacing: -0.1px;
-  filter: saturate(0.5);
+.nav-file {
+  &-title-content {
+    font-family: var(--font-monospace);
+    color: var(--color-yellow);
+    font-weight: 325;
+    font-size: 0.75rem;
+    letter-spacing: -0.1px;
+    filter: saturate(0.5);
+  }
+
+  &-tag {
+    color: var(--nav-item-color);
+    margin-left: auto;
+    padding-left: 1rem;
+  }
+
+  .nav-folder-title-content {
+    font-weight: 600;
+    color: var(--text-faint);
+  }
+
+  &-title .is-active {
+    color: var(--nav-item-background);
+    background-color: var(--nav-item-background-active);
+  }
+
+  &-title {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    &.is-active {
+      background-color: var(--background-modifier-active-hover) !important;
+    }
+  }
+
+  &.is-flashing > * {
+    color: var(--text-normal-reverse);
+  }
 }
 
-// Prevents content from being covered when hidden ribbon is exposed
-.nav-folder.mod-root {
-  margin-top: 1rem;
-  margin-left: 0.5rem;
-}
+.nav-folder {
+  &-title {
+    &:hover {
+      background-color: var(--background-modifier-active-hover) !important;
+    }
+  }
+  &.mod-root {
+    // Prevents content from being covered when hidden ribbon is exposed
+    margin-top: 1rem;
+    margin-left: 0.5rem;
 
-// @todo Might want to move this to a feature snippet
-// Hides vault name (displayed at root level)
-.nav-folder.mod-root > .nav-folder-title {
-  display: none;
+    & > .nav-folder-title {
+      // @todo Might want to move this to a feature snippet
+      // Hides vault name (displayed at root level)
+      display: none;
+    }
+  }
 }

@@ -1,26 +1,56 @@
 .workspace-tab-header {
-  flex: 1 1 auto;
   min-width: 3rem;
   max-width: 6rem;
+  width: 100%;
+
+  // Addtional selectors for content pane
+  .workspace .mod-root & {
+    flex: 1 1 auto;
+    min-width: 3rem;
+  }
+
+  .mod-left-split &.is-active,
+  .mod-right-split &.is-active {
+    opacity: 0.75;
+    background-color: var(--gray-10);
+    &:hover {
+      background-color: var(--background-modifier-active-hover);
+    }
+  }
 
   &-container {
     padding-top: 0;
+    padding-right: 0;
+    border-right: var(--tab-outline-width) 0 0 var(--tab-outline-color);
   }
 
   &-container-inner {
-    margin: 0;
+    // .mod-root for content panes
+    .mod-root & {
+      padding: 0 1px 0 0;
+    }
+    // .mod splits for sidebars
+    .mod-left-split &,
+    .mod-right-split & {
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+      gap: 0.25rem;
+      width: 100%;
+    }
+    margin: 0px 0px calc(var(--tab-outline-width) * -1);
     padding: 0;
-    width: 100%;
-    justify-content: center;
-    flex: 1 1 auto;
   }
 
   &-inner {
     padding: 0;
 
+    .mod-root &::after {
+      height: calc(var(--header-height) / 1.5);
+    }
+
     &-icon {
       line-height: 0;
-      // flex: 0 0 100%;
       padding: 0 0.5rem;
       margin: auto;
 
@@ -29,6 +59,14 @@
         width: 1.25rem;
       }
     }
+    &-title {
+      padding-right: 12px;
+    }
+  }
+  &-status-icon.mod-pinned {
+    --icon-size: var(--size-4-3);
+    --icon-stroke: var(--size-2-1);
+    color: var(--color-accent-2);
   }
 }
 
