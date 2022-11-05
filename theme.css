@@ -717,6 +717,51 @@ body {
   color: var(--color-accent-2);
 }
 
+.view-header {
+  opacity: 0.2;
+  transition: opacity 0.25s ease;
+}
+.view-header:hover {
+  opacity: 1;
+}
+.is-focused .workspace-leaf.mod-active .view-header {
+  opacity: 1;
+}
+.view-header-title-container:not(.mod-at-end)::after {
+  width: 0.5px;
+  background-color: var(--tab-divider-color);
+  height: 70%;
+  top: auto;
+}
+.view-header-nav-buttons .clickable-icon {
+  opacity: 0.2;
+  transition: opacity 0.25s ease;
+  color: var(--text-normal);
+}
+.view-header-nav-buttons .clickable-icon:hover {
+  opacity: 1;
+}
+.view-header-nav-buttons .clickable-icon:hover {
+  color: var(--interactive-accent);
+}
+.view-header .view-actions {
+  opacity: 0.2;
+  transition: opacity 0.25s ease;
+}
+.view-header .view-actions:hover {
+  opacity: 1;
+}
+.view-header .view-actions a {
+  color: var(--interactive-accent-hover);
+}
+.view-header .view-actions a:hover {
+  color: var(--interactive-accent);
+}
+
+.cm-line {
+  font-family: var(--font-monospace);
+}
+
 .cm-gutters {
   --gutter-width: 2rem;
   width: var(--gutter-width);

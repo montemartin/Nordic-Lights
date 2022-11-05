@@ -1,0 +1,40 @@
+@mixin hoverReveal {
+  opacity: 0.2;
+  transition: opacity 0.25s ease;
+  &:hover {
+    opacity: 1;
+  }
+}
+.view-header {
+  @include hoverReveal();
+  .is-focused .workspace-leaf.mod-active & {
+    opacity: 1;
+  }
+
+  &-title-container:not(.mod-at-end)::after {
+    width: 0.5px;
+    background-color: var(--tab-divider-color);
+    height: 70%;
+    top: auto;
+  }
+
+  &-nav-buttons {
+    & .clickable-icon {
+      @include hoverReveal();
+      color: var(--text-normal);
+      &:hover {
+        color: var(--interactive-accent);
+      }
+    }
+  }
+
+  & .view-actions {
+    @include hoverReveal();
+    & a {
+      color: var(--interactive-accent-hover);
+      &:hover {
+        color: var(--interactive-accent);
+      }
+    }
+  }
+}

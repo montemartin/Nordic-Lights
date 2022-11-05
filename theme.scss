@@ -10,10 +10,11 @@
 @use "layout/workspace-tab";
 @use "layout/workspace-leaf";
 
-// @use "content/checklists";
+@use "content/view-header";
+@use "content/view-content";
 @use "content/gutters";
 // @use "content/content";
-// @use "content/view";
+// @use "content/checklists";
 // @use "content/headings";
 // @use "content/typography";
 
