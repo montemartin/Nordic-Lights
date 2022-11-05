@@ -1,0 +1,36 @@
+/* --------------- */
+/* Status bar */
+/* --------------- */
+
+.status-bar {
+  transition: color 200ms linear;
+  color: var(--text-muted);
+  line-height: 1;
+}
+.status-bar {
+  background-color: transparent;
+  z-index: 30;
+  width: auto;
+  position: absolute;
+  left: auto;
+  border: 0;
+  bottom: 0;
+  right: 0;
+  max-height: unset;
+  padding-right: 30px;
+}
+.status-bar:hover {
+  color: var(--text-faint);
+  transition: color 200ms linear;
+}
+.status-bar > .status-bar-item:first-of-type {
+  flex-grow: 1;
+}
+.status-bar-item.mod-clickable:hover {
+  color: var(--text-normal);
+}
+.status-bar-item {
+  display: flex;
+  align-items: center;
+  line-height: 2;
+}

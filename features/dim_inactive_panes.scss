@@ -1,0 +1,12 @@
+/* Dim inactive panes */
+.workspace-leaf {
+  background-color: inherit;
+}
+
+.workspace-leaf:not(.mod-active) .workspace-leaf-content[data-type="markdown"] {
+  background-color: var(--background-primary);
+  opacity: 0.5;
+}
+.workspace-leaf:not(.mod-active):hover {
+  opacity: 1;
+}

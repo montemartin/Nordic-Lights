@@ -7,23 +7,25 @@
 @use "base/theme-dark";
 @use "base/theme-light";
 
-// @use "layout/layout";
-@use "layout/nav";
-@use "layout/icons";
 @use "layout/workspace-tab";
 @use "layout/workspace-leaf";
 
-// @use "content/content";
-// @use "content/headings";
 // @use "content/checklists";
+// @use "content/content";
+// @use "content/view";
+// @use "content/headings";
+// @use "content/typography";
+
 // @use "content/graph";
 // @use "content/images";
 // @use "content/search";
 // @use "content/tables";
 // @use "content/tags";
 
+@use "components/icons";
+@use "components/nav";
+@use "components/modal";
 // @use "components/statusbar";
-// @use "components/modals";
 
-@use "snippets/features/hide_ribbon";
-@use "snippets/features/dim_inactive_panes";
+@use "features/hide_ribbon";
+@use "features/dim_inactive_panes";

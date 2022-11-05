@@ -1,0 +1,23 @@
+/* Styles for the settings modal */
+.modal-bg {
+  opacity: 0.7;
+}
+
+.modal,
+.modal.mod-settings {
+  max-width: 160ch;
+}
+
+.modal.mod-settings .vertical-tab-header {
+  padding: 20px 10px 0 0;
+  flex: 0 0 auto;
+}
+
+.vertical-tab-nav-item.is-active {
+  margin-right: -10px;
+}
+
+.horizontal-tab-nav-item,
+.vertical-tab-nav-item {
+  padding: 0.75rem 2rem;
+}
