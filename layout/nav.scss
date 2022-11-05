@@ -48,6 +48,13 @@
   filter: saturate(0.5);
 }
 
+// Prevents content from being covered when hidden ribbon is exposed
+.nav-folder.mod-root {
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+}
+
+// @todo Might want to move this to a feature snippet
 // Hides vault name (displayed at root level)
 .nav-folder.mod-root > .nav-folder-title {
   display: none;
