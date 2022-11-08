@@ -110,6 +110,9 @@ body {
       background-color: var(--background-modifier-active-hover) !important;
     }
   }
+  &.has-focus {
+    background-color: var(--background-modifier-cover);
+  }
   &.mod-root {
     // Prevents content from being covered when hidden ribbon is exposed
     margin-top: 1rem;
