@@ -1,25 +1,48 @@
+body {
+  --tag-size: var(--font-smaller);
+  --tag-color: var(--text-accent);
+  --tag-color-hover: var(--text-accent);
+  --tag-decoration: none;
+  --tag-decoration-hover: none;
+  --tag-background: hsla(var(--interactive-accent-hsl), 0.1);
+  --tag-background-hover: hsla(var(--interactive-accent-hsl), 0.2);
+  --tag-border-color: hsla(var(--interactive-accent-hsl), 0.15);
+  --tag-border-color-hover: hsla(var(--interactive-accent-hsl), 0.15);
+  --tag-border-width: 1px;
+  --tag-padding-x: 0.875em;
+  --tag-padding-y: 0.125em;
+  --tag-radius: 0.25em;
+}
+
 .cm-s-obsidian span.cm-hashtag {
   color: var(--text-faint);
 }
 
-.cm-hashtag {
-  background-color: var(--background-secondary-alt);
-  font-size: 0.75em;
-  line-height: inherit;
+.tag,
+.cm-line .cm-hashtag {
+  font-size: 0.75rem !important;
+  font-family: var(--font-sans);
   font-style: normal;
-  vertical-align: middle !important;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  color: var(--text-normal);
+  background-color: var(--tag-background);
+  vertical-align: baseline !important;
 }
 .cm-formatting-hashtag {
+  display: inline;
 }
 
+// These custom tag styles might be better served as snippets or a feature file
 .cm-s-obsidian span.cm-tag-s,
 .cm-s-obsidian span.cm-tag-e,
 .cm-s-obsidian span.cm-tag-n,
 .cm-s-obsidian span.cm-tag-v,
 .tag[href^="#/"] {
-  background-color: var(--color-blue);
-  filter: brightness(70%);
-  color: var(--text-normal);
+  background-color: var(--color-accent);
+  filter: brightness(80%);
+  color: var(--gray-00);
+  border: none;
 }
 
 .tag[href^="#//"]
