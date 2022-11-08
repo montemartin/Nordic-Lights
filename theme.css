@@ -623,13 +623,13 @@ body {
   --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
   --color-accent-1: hsl(
     var(--accent-h),
-    var(--accent-s),
-    calc(var(--accent-l) - 3.8%)
+    calc(var(--accent-s) + 3%),
+    calc(var(--accent-l) - 12%)
   );
   --color-accent-2: hsl(
     var(--accent-h),
-    var(--accent-s),
-    calc(var(--accent-l) + 3.8%)
+    calc(var(--accent-s) - 4%),
+    calc(var(--accent-l) - 16%)
   );
   --background-primary: var(--gray-12);
   --background-primary-alt: var(--gray-10);
@@ -770,6 +770,23 @@ body {
 }
 .cm-gutters:hover {
   opacity: 1;
+}
+
+body {
+  --blockquote-border-thickness: 0.25rem;
+  --blockquote-border-color: var(--color-accent);
+  --blockquote-font-style: normal;
+  --blockquote-color: inherit;
+  --blockquote-background-color: var(--color-accent-2);
+}
+
+.markdown-rendered blockquote,
+.HyperMD-quote {
+  color: var(--text-highlight);
+  background-color: var(--blockquote-background-color);
+  text-shadow: 0.5px 0.5px var(--text-faint);
+  font-weight: 500;
+  padding: 0 var(--size-4-6);
 }
 
 .collapse-icon > svg {
@@ -1007,6 +1024,62 @@ body {
 
 .workspace-leaf:not(.mod-active):hover {
   opacity: 1;
+}
+
+.cm-s-obsidian span.cm-hashtag {
+  color: var(--text-faint);
+}
+
+.cm-hashtag {
+  background-color: var(--background-secondary-alt);
+  font-size: 0.75em;
+  line-height: inherit;
+  font-style: normal;
+  vertical-align: middle !important;
+}
+
+.cm-s-obsidian span.cm-tag-s,
+.cm-s-obsidian span.cm-tag-e,
+.cm-s-obsidian span.cm-tag-n,
+.cm-s-obsidian span.cm-tag-v,
+.tag[href^="#/"] {
+  background-color: var(--color-blue);
+  filter: brightness(70%);
+  color: var(--text-normal);
+}
+
+.tag[href^="#//"] {
+  background-color: var(--background-secondary-alt);
+  filter: brightness(80%);
+}
+
+.cm-s-obsidian span.cm-tag-next,
+.tag[href*="#//next"] {
+  color: var(--color-yellow);
+}
+
+.cm-s-obsidian span.cm-tag-active,
+.tag[class~="#//active"] {
+  color: var(--color-green);
+}
+
+.cm-s-obsidian span[class*=cm-tag--due],
+.tag[href*=-due] {
+  color: var(--color-red);
+}
+
+.cm-s-obsidian span.cm-tag-done,
+.tag[href*="#//done"] {
+  color: var(--frost0);
+}
+
+.cm-s-obsidian span.cm-tag-priority,
+.tag[href*="#--priority/1"] {
+  color: var(--color-red);
+}
+
+.cm-tag--waitingOn ~ * {
+  color: var(--dark3);
 }
 
 /* @todo do some work on regular ul/ol lists */
@@ -1669,62 +1742,6 @@ thead {
   /* padding-top: 4px; */
 }
 
-.cm-s-obsidian span.cm-hashtag {
-  color: var(--text-faint);
-}
-
-.cm-hashtag {
-  background-color: var(--background-secondary-alt);
-  font-size: 0.75em;
-  line-height: inherit;
-  font-style: normal;
-  vertical-align: middle !important;
-}
-
-.cm-s-obsidian span.cm-tag-s,
-.cm-s-obsidian span.cm-tag-e,
-.cm-s-obsidian span.cm-tag-n,
-.cm-s-obsidian span.cm-tag-v,
-.tag[href^="#/"] {
-  background-color: var(--color-blue);
-  filter: brightness(70%);
-  color: var(--text-normal);
-}
-
-.tag[href^="#//"] {
-  background-color: var(--background-secondary-alt);
-  filter: brightness(80%);
-}
-
-.cm-s-obsidian span.cm-tag-next,
-.tag[href*="#//next"] {
-  color: var(--color-yellow);
-}
-
-.cm-s-obsidian span.cm-tag-active,
-.tag[class~="#//active"] {
-  color: var(--color-green);
-}
-
-.cm-s-obsidian span[class*=cm-tag--due],
-.tag[href*=-due] {
-  color: var(--color-red);
-}
-
-.cm-s-obsidian span.cm-tag-done,
-.tag[href*="#//done"] {
-  color: var(--frost0);
-}
-
-.cm-s-obsidian span.cm-tag-priority,
-.tag[href*="#--priority/1"] {
-  color: var(--color-red);
-}
-
-.cm-tag--waitingOn ~ * {
-  color: var(--dark3);
-}
-
 .cm-line {
   -webkit-font-smoothing: auto;
   font-family: var(--font-monospace);
@@ -1766,12 +1783,6 @@ thead {
   font-weight: 500;
   padding: 2px;
   line-height: calc(1.5em + 2px);
-}
-
-blockquote,
-.cm-s-obsidian span.cm-quote,
-pre.HyperMD-quote {
-  color: var(--text-blockquote);
 }
 
 .cm-hmd-frontmatter {

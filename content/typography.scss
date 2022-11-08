@@ -39,12 +39,6 @@
   line-height: calc(1.5em + 2px);
 }
 
-blockquote,
-.cm-s-obsidian span.cm-quote,
-pre.HyperMD-quote {
-  color: var(--text-blockquote);
-}
-
 .cm-hmd-frontmatter {
   color: var(--text-faint);
   font-size: 0.875rem;

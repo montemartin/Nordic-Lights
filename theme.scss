@@ -13,6 +13,7 @@
 @use "content/view-header";
 @use "content/view-content";
 @use "content/gutters";
+@use "content/blockquote";
 
 @use "components/icons";
 @use "components/nav";
@@ -22,6 +23,7 @@
 @use "features/dim_inactive_panes";
 
 // Below here still needs attention
+@use "content/tags";
 @use "content/checklists";
 @use "content/links";
 @use "content/graph";
@@ -29,7 +31,6 @@
 @use "content/images";
 @use "content/search";
 @use "content/tables";
-@use "content/tags";
 @use "content/typography";
 @use "content/footnote";
 @use "content/code";
