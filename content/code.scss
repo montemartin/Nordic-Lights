@@ -1,63 +1,33 @@
-// Code Blocks
-.cm-s-obsidian .CodeMirror-line.HyperMD-codeblock {
-  padding-left: var(--content-padding-block);
+body {
+  --code-size: var(--font-small);
+  --code-background: var(--background-primary-alt);
+  --code-normal: var(--gray-02);
+  --code-comment: var(--gray-07);
+  --code-punctuation: var(--text-muted);
+  --code-tag: var(--color-red);
+  --code-value: var(--color-purple);
+  --code-string: var(--color-green);
+  --code-property: var(--color-cyan);
+  --code-function: var(--color-yellow);
+  --code-keyword: var(--color-pink);
+  --code-important: var(--color-orange);
 }
 
-.cm-s-obsidian span.cm-inline-code.cm-hmd-indented-code {
-  display: inline-block;
-  padding: 2px 4px;
-  background-color: var(--background-code);
-}
-.cm-s-obsidian div.HyperMD-codeblock-bg {
-  background-color: var(--background-code);
-  color: var(--text-code);
-}
-.cm-s-obsidian pre.HyperMD-codeblock-begin,
-.cm-s-obsidian pre.HyperMD-codeblock-begin-bg {
-  padding-top: var(--content-padding-block);
-}
-.cm-s-obsidian div.HyperMD-codeblock-begin-bg {
-  border-top-left-radius: var(--content-radius);
-  border-top-right-radius: var(--content-radius);
-}
-.cm-s-obsidian pre.HyperMD-codeblock-end,
-.cm-s-obsidian pre.HyperMD-codeblock-end-bg {
-  padding-top: var(--content-padding-block);
-}
-.cm-s-obsidian div.HyperMD-codeblock-end-bg {
-  border-bottom-left-radius: var(--content-radius);
-  border-bottom-right-radius: var(--content-radius);
-}
-
-// Inline Code
-.markdown-preview-section pre,
-.markdown-preview-section code {
-  font-size: 0.9em;
-  background-color: var(--background-code);
-  color: var(--text-code-inline);
-}
-
+.cm-inline-code,
+.cm-s-obsidian span.cm-inline-code.cm-hmd-indented-code,
 .markdown-preview-section pre code {
-  /* Code blocks and indented code */
+  background-color: var(--code-background);
   padding: 2px;
-  display: block;
-  color: var(--text-code);
+  display: inline-block;
 }
 
-.markdown-preview-section code {
-}
-.cm-s-obsidian
-  span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
-  background-color: inherit;
+.cm-s-obsidian span.cm-comment {
+  // Forces comment var to work in edit/source mode
+  color: var(--code-comment);
 }
 
-.cm-s-obsidian span.cm-inline-code,
-.cm-s-obsidian span.cm-hmd-indented-code {
-  color: var(--text-code-inline);
-  background-color: inherit;
-  font-size: 0.875rem;
-}
-
-.cm-s-obsidian .HyperMD-codeblock {
-  color: var(--color-red);
+span.cm-inline-code.cm-formatting-code,
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-begin,
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-end {
+  color: var(--yellow);
 }
