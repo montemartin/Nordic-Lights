@@ -6,27 +6,32 @@ body {
 }
 
 .workspace-ribbon {
-  border: none;
-  // background-color: transparent;
-  &-collapse-btn {
-    height: 100%;
-  }
-
   &.mod-left {
+    background-color: transparent;
     margin-top: 0;
     &::before {
+      background-color: transparent;
       position: relative;
       margin-bottom: 1rem;
+    }
+
+    &.is-collapsed {
+      transition: all 0.25s ease;
+      border-color: transparent;
+      background-color: transparent;
+      &:hover {
+        background-color: var(--ribbon-background);
+        border-color: var(--divider-color);
+      }
     }
   }
 }
 
 .side-dock-ribbon {
-  transition: all 0.25s ease;
   border-right: 1px solid transparent;
 
   &:hover {
-    // background-color: var(--background-primary);
+    background-color: var(--background-primary);
     border-right-color: var(--divider-color);
   }
   &.mod-left {
@@ -65,11 +70,19 @@ body {
 
 .is-frameless {
   --header-height: 2.5rem;
+  --frame-left-space: 80px;
 
   .workspace-ribbon.mod-left {
-    margin-top: var(--header-height);
-    &::before {
-      display: none;
+    border-color: transparent;
+    &:hover {
+      border-color: var(--divider-color);
     }
+  }
+}
+
+.is-hidden-frameless .workspace-ribbon.mod-left {
+  margin-top: var(--header-height);
+  &::before {
+    display: none;
   }
 }

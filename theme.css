@@ -286,7 +286,7 @@ body {
   --h5-weight: 600;
   --h6-weight: 600;
   /* View header */
-  --header-height: 2.5rem;
+  --header-height: 2rem;
   /* Horizontal rules */
   --hr-color: var(--background-modifier-border);
   --hr-thickness: 2px;
@@ -658,8 +658,8 @@ body {
 }
 
 .workspace-tab-header {
+  flex-basis: 50%;
   min-width: 3rem;
-  max-width: 6rem;
   width: 100%;
 }
 .workspace .mod-root .workspace-tab-header {
@@ -692,10 +692,10 @@ body {
   gap: 0.25rem;
   width: 100%;
 }
-.workspace-tab-header-inner {
+.workspace-tab-header-inner .mod-root {
   padding: 0;
 }
-.mod-root .workspace-tab-header-inner::after {
+.workspace-tab-header-inner .mod-root::after {
   height: calc(var(--header-height) / 1.5);
 }
 .workspace-tab-header-inner-icon {
@@ -814,14 +814,14 @@ body {
 }
 
 .nav-buttons-container {
+  height: calc(var(--header-height) * 0.75);
   box-shadow: 0px 0.5px var(--gray-10);
   width: 90%;
   margin: 0px auto;
 }
 
 .nav-action-button {
-  padding: 0.5rem 0.75rem;
-  margin: 0.5rem 1px;
+  padding: 0rem 0.75rem;
   line-height: 0;
   border-radius: 0;
   color: var(--text-faint);
@@ -922,25 +922,30 @@ body {
   --ribbon-width: var(--header-height);
 }
 
-.workspace-ribbon {
-  border: none;
-}
-.workspace-ribbon-collapse-btn {
-  height: 100%;
-}
 .workspace-ribbon.mod-left {
+  background-color: transparent;
   margin-top: 0;
 }
 .workspace-ribbon.mod-left::before {
+  background-color: transparent;
   position: relative;
   margin-bottom: 1rem;
 }
+.workspace-ribbon.mod-left.is-collapsed {
+  transition: all 0.25s ease;
+  border-color: transparent;
+  background-color: transparent;
+}
+.workspace-ribbon.mod-left.is-collapsed:hover {
+  background-color: var(--ribbon-background);
+  border-color: var(--divider-color);
+}
 
 .side-dock-ribbon {
-  transition: all 0.25s ease;
   border-right: 1px solid transparent;
 }
 .side-dock-ribbon:hover {
+  background-color: var(--background-primary);
   border-right-color: var(--divider-color);
 }
 .side-dock-ribbon.mod-left {
@@ -974,11 +979,19 @@ body {
 
 .is-frameless {
   --header-height: 2.5rem;
+  --frame-left-space: 80px;
 }
 .is-frameless .workspace-ribbon.mod-left {
+  border-color: transparent;
+}
+.is-frameless .workspace-ribbon.mod-left:hover {
+  border-color: var(--divider-color);
+}
+
+.is-hidden-frameless .workspace-ribbon.mod-left {
   margin-top: var(--header-height);
 }
-.is-frameless .workspace-ribbon.mod-left::before {
+.is-hidden-frameless .workspace-ribbon.mod-left::before {
   display: none;
 }
 
