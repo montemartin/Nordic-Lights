@@ -49,6 +49,7 @@ body {
   --checklist-done-color: var(--text-muted);
 
   /* Code */
+  // values set in /content/code
   --code-size: var(--font-smaller);
   --code-background: var(--background-primary-alt);
   --code-normal: var(--gray-04);
@@ -277,24 +278,25 @@ body {
   --list-bullet-size: 5px;
   --list-bullet-transform: none;
 
-  /* File navigator */
-  --nav-item-size: var(--font-ui-small);
-  --nav-item-color: var(--text-faint);
-  --nav-item-color-hover: var(--text-normal);
-  --nav-item-color-active: var(--text-normal);
-  --nav-item-color-selected: var(--text-normal);
-  --nav-item-color-highlighted: var(--text-accent-hover);
-  --nav-item-background-hover: var(--background-primary-alt);
-  --nav-item-background-active: var(--background-secondary-alt);
-  --nav-item-background-selected: hsla(var(--color-accent-hsl), 0.2);
-  --nav-item-weight: inherit;
-  --nav-item-weight-hover: inherit;
-  --nav-item-weight-active: inherit;
-  --nav-item-white-space: nowrap;
-  --nav-indentation-guide-width: var(--indentation-guide-width);
-  --nav-indentation-guide-color: var(--indentation-guide-color);
-  --nav-collapse-icon-color: var(--collapse-icon-color);
-  --nav-collapse-icon-color-collapsed: var(--text-faint);
+  // /* File navigator */
+  // Values set in /layout/nav.scss
+  // --nav-item-size: var(--font-ui-small);
+  // --nav-item-color: var(--text-faint);
+  // --nav-item-color-hover: var(--text-normal);
+  // --nav-item-color-active: var(--text-normal);
+  // --nav-item-color-selected: var(--text-normal);
+  // --nav-item-color-highlighted: var(--text-accent-hover);
+  // --nav-item-background-hover: var(--background-primary-alt);
+  // --nav-item-background-active: var(--background-secondary-alt);
+  // --nav-item-background-selected: hsla(var(--color-accent-hsl), 0.2);
+  // --nav-item-weight: inherit;
+  // --nav-item-weight-hover: inherit;
+  // --nav-item-weight-active: inherit;
+  // --nav-item-white-space: nowrap;
+  // --nav-indentation-guide-width: var(--indentation-guide-width);
+  // --nav-indentation-guide-color: var(--indentation-guide-color);
+  // --nav-collapse-icon-color: var(--collapse-icon-color);
+  // --nav-collapse-icon-color-collapsed: var(--text-faint);
 
   /* Modals - e.g. settings, community themes, community plugins */
   --modal-width: 90vw;
@@ -432,6 +434,7 @@ body {
   --table-row-last-border-width: var(--table-border-width);
 
   /* Tags */
+  // Values set in /content/tags.scss
   --tag-size: var(--font-smaller);
   --tag-color: var(--text-accent);
   --tag-color-hover: var(--text-accent);

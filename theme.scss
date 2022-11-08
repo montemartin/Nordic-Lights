@@ -18,6 +18,8 @@
 @use "components/icons";
 @use "components/nav";
 @use "components/modal";
+@use "content/headings";
+@use "content/code";
 
 @use "features/hide_ribbon";
 @use "features/dim_inactive_panes";
@@ -25,15 +27,13 @@
 // Below here still needs attention
 @use "content/tags";
 @use "content/checklists";
+@use "content/search";
 @use "content/links";
 @use "content/graph";
-@use "content/headings";
 @use "content/images";
-@use "content/search";
 @use "content/tables";
 @use "content/typography";
 @use "content/footnote";
-@use "content/code";
 
 @use "components/tooltip";
 @use "components/statusbar";

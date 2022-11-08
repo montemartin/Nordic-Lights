@@ -1,3 +1,7 @@
+.markdown-source-view {
+  // Monospace renders larger than sans, this keeps them closer in size
+  font-size: calc(var(--font-text-size) * 0.875);
+}
 .cm-line {
   -webkit-font-smoothing: auto;
   font-family: var(--font-monospace);
@@ -20,8 +24,9 @@
 }
 
 .markdown-preview-view {
+  font-weight: 300;
   p {
-    margin: auto;
+    margin: 0.75rem auto;
   }
   .heading-collapse-indicator {
     margin-left: -2rem;
@@ -29,6 +34,7 @@
   }
 }
 
+// Highlights
 .markdown-rendered mark,
 .cm-s-obsidian span.cm-highlight {
   /* Highlighted text */

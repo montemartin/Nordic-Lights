@@ -1,3 +1,22 @@
+body {
+  --nav-item-size: var(--font-ui-small);
+  --nav-item-color: var(--text-faint);
+  --nav-item-color-hover: var(--text-normal);
+  --nav-item-color-active: var(--text-normal);
+  --nav-item-color-selected: var(--text-normal);
+  --nav-item-color-highlighted: var(--text-accent-hover);
+  --nav-item-background-hover: var(--background-primary-alt);
+  --nav-item-background-active: var(--background-secondary-alt);
+  --nav-item-background-selected: hsla(var(--color-accent-hsl), 0.2);
+  --nav-item-weight: inherit;
+  --nav-item-weight-hover: inherit;
+  --nav-item-weight-active: inherit;
+  --nav-item-white-space: nowrap;
+  --nav-indentation-guide-width: var(--indentation-guide-width);
+  --nav-indentation-guide-color: var(--indentation-guide-color);
+  --nav-collapse-icon-color: var(--collapse-icon-color);
+  --nav-collapse-icon-color-collapsed: var(--text-faint);
+}
 // Nav is used for menus inside leaf containers
 .nav-header {
   padding: 0;
@@ -39,12 +58,17 @@
   }
 }
 
+.nav-files-container {
+  // Reduces font size relative to other
+  --nav-item-size: 0.875rem;
+}
+
 .nav-file {
   &-title-content {
     font-family: var(--font-monospace);
     color: var(--color-yellow);
     font-weight: 325;
-    font-size: 0.75rem;
+    font-size: 0.875em;
     letter-spacing: -0.1px;
     filter: saturate(0.5);
   }
