@@ -1,16 +1,38 @@
-/* Styles for the settings modal */
+@mixin data($pad-l, $font-size) {
+  font-size: var(--font$font-size);
+  padding: 0 0 0 var(--size-4$pad-l);
+  font-style: italic;
+}
+body {
+  --modal-width: 60%;
+  --modal-height: 80%;
+  --modal-max-width: 200ch;
+  --modal-max-height: 80vh;
+  --modal-max-width-narrow: 90%;
+  --modal-border-width: 1px;
+  --modal-border-color: var(--background-modifier-border);
+  --modal-radius: none;
+  --modal-community-sidebar-width: 35%;
+}
 .modal-bg {
-  opacity: 0.7;
+  background: var(--background-modifier-cover) !important;
 }
-
-.modal,
-.modal.mod-settings {
-  max-width: 160ch;
+.modal {
+  box-shadow: 0rem 0rem 3rem 4rem var(--background-modifier-cover);
+  &.mod-settings {
+    & .vertical-tab-header {
+      border-right: 0;
+    }
+  }
 }
-
-.modal.mod-settings .vertical-tab-header {
-  padding: 20px 10px 0 0;
-  flex: 0 0 auto;
+.modal-container {
+  & + .modal-container {
+    & .modal {
+      // margin: 0rem 2rem;
+      width: calc(var(--modal-width) + 6rem);
+      height: calc(var(--modal-height) - 3rem);
+    }
+  }
 }
 
 .vertical-tab-nav-item.is-active {
@@ -19,5 +41,40 @@
 
 .horizontal-tab-nav-item,
 .vertical-tab-nav-item {
-  padding: 0.75rem 2rem;
+  padding: 0.5rem 1rem;
+}
+
+.modal-setting-nav-bar {
+  border-bottom: none;
+}
+
+.community-modal {
+  &-sidebar {
+    & .setting-item {
+      max-width: 100%;
+    }
+  }
+  &-search-summary {
+    @include data(-4, smallest);
+  }
+  &-search-results-wrapper {
+  }
+  &-search-results {
+    padding: var(--size-4-3);
+    gap: var(--size-4-3);
+    & .community-item {
+      border-radius: 0;
+      border: 0;
+      box-shadow: var(--shadow-l);
+      &-author {
+        @include data(-2, smallest);
+      }
+      &-downloads {
+        @include data(-2, small);
+      }
+    }
+  }
+  &-details {
+    border-left: 0;
+  }
 }
