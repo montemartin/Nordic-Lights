@@ -6,10 +6,10 @@
 
   --opacity-translucency: 0.75;
 
-  --mono-rgb-0: 255, 255, 255;
-  --mono-rgb-100: 0, 0, 0;
-  --color-red-rgb: 228, 55, 75;
-  --color-green-rgb: 12, 181, 79;
+  --mono-rgb-0: 229, 233, 240;
+  --mono-rgb-100: 14, 15, 17;
+  --color-red-rgb: 178, 77, 84;
+  --color-green-rgb: 119, 173, 88;
 
   --color-red: var(--red);
   --color-green: var(--green);
@@ -58,7 +58,7 @@
   --interactive-normal: var(--gray-05);
   --interactive-hover: var(--gray-06);
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
-  --background-modifier-cover: rgba(10, 10, 10, 0.4);
+  --background-modifier-cover: rgba(var(--mono-rgb-100), 0.9);
   --background-modifier-hover: hsla(var(--color-accent-hsl), 0.2);
   --text-highlight-bg: var(--color-yellow);
   --text-highlight-bg-active: var(--yellow-bright);
