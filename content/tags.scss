@@ -9,28 +9,29 @@ body {
   --tag-border-color: hsla(var(--interactive-accent-hsl), 0.15);
   --tag-border-color-hover: hsla(var(--interactive-accent-hsl), 0.15);
   --tag-border-width: 1px;
-  --tag-padding-x: 0.875em;
+  --tag-padding-x: 0.625em;
   --tag-padding-y: 0.125em;
   --tag-radius: 0.25em;
 }
 
-.cm-s-obsidian span.cm-hashtag {
-  color: var(--text-faint);
-}
-
 .tag,
-.cm-line .cm-hashtag {
+.cm-hashtag {
+  display: inline;
   font-size: 0.75rem !important;
   font-family: var(--font-sans);
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0.025em;
-  color: var(--text-normal);
   background-color: var(--tag-background);
   vertical-align: baseline !important;
 }
-.cm-formatting-hashtag {
+
+.cm-hashtag.cm-hashtag-begin {
+  // Prevent tags from wrapping after `#` when editing
+  padding-right: 1px;
+  break-after: avoid;
   display: inline;
+  padding-right: 1px;
 }
 
 // These custom tag styles might be better served as snippets or a feature file

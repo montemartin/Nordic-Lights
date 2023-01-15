@@ -10,13 +10,13 @@ body {
   --anim-motion-delay: cubic-bezier(0.65, 0.05, 0.36, 1);
   --anim-motion-jumpy: cubic-bezier(0.68, -0.55, 0.27, 1.55);
 
-  /* Blockquotes */
-  // values set in /content/blockquote
-  --blockquote-border-thickness: 1px;
-  --blockquote-border-color: var(--interactive-accent);
-  --blockquote-font-style: normal;
-  --blockquote-color: inherit;
-  --blockquote-background-color: transparent;
+  // /* Blockquotes */
+  // // @see /content/blockquote
+  // --blockquote-border-thickness: 1px;
+  // --blockquote-border-color: var(--interactive-accent);
+  // --blockquote-font-style: normal;
+  // --blockquote-color: inherit;
+  // --blockquote-background-color: transparent;
 
   /* Bold */
   --bold-weight: var(--font-semibold);
@@ -28,8 +28,7 @@ body {
   /* Callouts */
   --callout-border-width: 1px;
   --callout-border-opacity: 0.25;
-  --callout-padding: var(--size-4-3) var(--size-4-3) var(--size-4-3)
-    var(--size-4-6);
+  --callout-padding: var(--size-4-3) var(--size-4-3) var(--size-4-3) var(--size-4-6);
   --callout-radius: var(--radius-s);
   --callout-blend-mode: var(--highlight-mix-blend-mode);
   --callout-title-padding: 0;
@@ -48,20 +47,20 @@ body {
   --checklist-done-decoration: line-through;
   --checklist-done-color: var(--text-muted);
 
-  /* Code */
-  // values set in /content/code
-  --code-size: var(--font-smaller);
-  --code-background: var(--background-primary-alt);
-  --code-normal: var(--gray-04);
-  --code-comment: var(--text-faint);
-  --code-punctuation: var(--text-muted);
-  --code-tag: var(--color-red);
-  --code-value: var(--color-purple);
-  --code-string: var(--color-green);
-  --code-property: var(--color-cyan);
-  --code-function: var(--color-yellow);
-  --code-keyword: var(--color-pink);
-  --code-important: var(--color-orange);
+  // /* Code */
+  // // @see /content/code
+  // --code-size: var(--font-smaller);
+  // --code-background: var(--background-primary-alt);
+  // --code-normal: var(--gray-04);
+  // --code-comment: var(--text-faint);
+  // --code-punctuation: var(--text-muted);
+  // --code-tag: var(--color-red);
+  // --code-value: var(--color-purple);
+  // --code-string: var(--color-green);
+  // --code-property: var(--color-cyan);
+  // --code-function: var(--color-yellow);
+  // --code-keyword: var(--color-pink);
+  // --code-important: var(--color-orange);
 
   /* Collapse icons */
   --collapse-icon-color: var(--text-faint);
@@ -97,8 +96,7 @@ body {
   --embed-font-style: inherit;
 
   /* Blocks */
-  --embed-block-shadow-hover: 0 0 0 1px var(--background-modifier-border),
-    inset 0 0 0 1px var(--background-modifier-border);
+  --embed-block-shadow-hover: 0 0 0 1px var(--background-modifier-border), inset 0 0 0 1px var(--background-modifier-border);
 
   /* File layout */
   --file-line-width: 100ch;
@@ -279,7 +277,7 @@ body {
   --list-bullet-transform: none;
 
   // /* File navigator */
-  // Values set in /layout/nav.scss
+  // // @see /layout/nav.scss
   // --nav-item-size: var(--font-ui-small);
   // --nav-item-color: var(--text-faint);
   // --nav-item-color-hover: var(--text-normal);
@@ -299,7 +297,7 @@ body {
   // --nav-collapse-icon-color-collapsed: var(--text-faint);
 
   /* Modals - e.g. settings, community themes, community plugins */
-  // Values set in /components/modal.scss
+  // // @see /components/modal.scss
   // --modal-width: 90vw;
   // --modal-height: 85vh;
   // --modal-max-width: 1100px;
@@ -326,10 +324,7 @@ body {
   --prompt-max-width: 80vw;
   --prompt-max-height: 70vh;
   --prompt-border-width: var(--border-width);
-  --prompt-border-color: var(
-    var(--gray-06),
-    var(--background-modifier-border-focus)
-  );
+  --prompt-border-color: var(var(--gray-06), var(--background-modifier-border-focus));
 
   /* Radiuses */
   --radius-s: 2px;
@@ -411,44 +406,45 @@ body {
   --tab-stacked-text-writing-mode: vertical-lr;
   --tab-stacked-shadow: -8px 0 8px 0 rgba(0, 0, 0, 0.05);
 
-  /* Tables */
-  --table-background: transparent;
-  --table-border-width: 1px;
-  --table-border-color: var(--background-modifier-border);
-  --table-white-space: normal;
-  --table-header-background: var(--table-background);
-  --table-header-background-hover: inherit;
-  --table-header-border-width: var(--table-border-width);
-  --table-header-border-color: var(--table-border-color);
-  --table-header-font: inherit;
-  --table-header-size: var(--font-smaller);
-  --table-header-weight: var(--font-normal);
-  --table-header-color: var(--text-muted);
-  --table-text-size: inherit;
-  --table-text-color: inherit;
-  --table-column-max-width: none;
-  --table-column-alt-background: var(--table-background);
-  --table-column-first-border-width: var(--table-border-width);
-  --table-column-last-border-width: var(--table-border-width);
-  --table-row-background-hover: var(--table-background);
-  --table-row-alt-background: var(--table-background);
-  --table-row-last-border-width: var(--table-border-width);
+  // /* Tables */
+  // // @see /content/tables.scss
+  // --table-background: transparent;
+  // --table-border-width: 1px;
+  // --table-border-color: var(--background-modifier-border);
+  // --table-white-space: normal;
+  // --table-header-background: var(--table-background);
+  // --table-header-background-hover: inherit;
+  // --table-header-border-width: var(--table-border-width);
+  // --table-header-border-color: var(--table-border-color);
+  // --table-header-font: inherit;
+  // --table-header-size: var(--font-smaller);
+  // --table-header-weight: var(--font-normal);
+  // --table-header-color: var(--text-muted);
+  // --table-text-size: inherit;
+  // --table-text-color: inherit;
+  // --table-column-max-width: none;
+  // --table-column-alt-background: var(--table-background);
+  // --table-column-first-border-width: var(--table-border-width);
+  // --table-column-last-border-width: var(--table-border-width);
+  // --table-row-background-hover: var(--table-background);
+  // --table-row-alt-background: var(--table-background);
+  // --table-row-last-border-width: var(--table-border-width);
 
-  /* Tags */
-  // Values set in /content/tags.scss
-  --tag-size: var(--font-smaller);
-  --tag-color: var(--text-accent);
-  --tag-color-hover: var(--text-accent);
-  --tag-decoration: none;
-  --tag-decoration-hover: none;
-  --tag-background: hsla(var(--interactive-accent-hsl), 0.1);
-  --tag-background-hover: hsla(var(--interactive-accent-hsl), 0.2);
-  --tag-border-color: hsla(var(--interactive-accent-hsl), 0.15);
-  --tag-border-color-hover: hsla(var(--interactive-accent-hsl), 0.15);
-  --tag-border-width: 0px;
-  --tag-padding-x: 0.65em;
-  --tag-padding-y: 0.25em;
-  --tag-radius: 2em;
+  // /* Tags */
+  // // @see /content/tags.scss
+  // --tag-size: var(--font-smaller);
+  // --tag-color: var(--text-accent);
+  // --tag-color-hover: var(--text-accent);
+  // --tag-decoration: none;
+  // --tag-decoration-hover: none;
+  // --tag-background: hsla(var(--interactive-accent-hsl), 0.1);
+  // --tag-background-hover: hsla(var(--interactive-accent-hsl), 0.2);
+  // --tag-border-color: hsla(var(--interactive-accent-hsl), 0.15);
+  // --tag-border-color-hover: hsla(var(--interactive-accent-hsl), 0.15);
+  // --tag-border-width: 0px;
+  // --tag-padding-x: 0.65em;
+  // --tag-padding-y: 0.25em;
+  // --tag-radius: 2em;
 
   /* Window frame */
   --titlebar-background: var(--background-secondary);
@@ -497,7 +493,7 @@ body {
   --background-modifier-active-hover: hsla(var(--interactive-accent-hsl), 0.25);
   --background-modifier-border: var(--gray-09);
   --background-modifier-border-hover: var(--gray-08);
-  --background-modifier-border-focus: hsla(var(--interactive-accent-hsl), 0.5)
+  --background-modifier-border-focus: hsla(var(--interactive-accent-hsl), 0.5);
   --background-modifier-error-rgb: var(--color-red-rgb);
   --background-modifier-error: var(--color-red);
   --background-modifier-error-hover: var(--color-red);

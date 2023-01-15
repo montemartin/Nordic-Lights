@@ -1,20 +1,18 @@
 body {
-  --blockquote-border-thickness: 0.25rem;
+  --blockquote-border-thickness: 0.125rem;
   --blockquote-border-color: var(--color-accent);
   --blockquote-font-style: normal;
   --blockquote-color: inherit;
-  --blockquote-background-color: var(--color-accent-2);
+  --blockquote-background-color: var(--background-primary-alt);
 }
 
 .markdown-rendered blockquote,
 .HyperMD-quote {
   color: var(--text-highlight);
   background-color: var(--blockquote-background-color);
-  text-shadow: 0.5px 0.5px var(--text-faint);
-  font-weight: 500;
-  padding: 0 var(--size-4-6);
+  padding: var(--size-4-3) var(--size-4-4);
+  margin-block-start: 0;
 }
-.HyperMD-quote {
-  border-left: var(--blockquote-border-thickness) solid
-    var(--blockquote-border-color);
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-quote {
+  padding: var(--size-4-2);
 }
