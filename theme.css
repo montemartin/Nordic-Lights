@@ -804,8 +804,8 @@ body {
   --nav-item-color-active: var(--text-normal);
   --nav-item-color-selected: var(--text-normal);
   --nav-item-color-highlighted: var(--text-accent-hover);
-  --nav-item-background-hover: var(--background-primary-alt);
-  --nav-item-background-active: var(--background-secondary-alt);
+  --nav-item-background-active: var(--background-primary-alt);
+  --nav-item-background-hover: var(--background-secondary-alt);
   --nav-item-background-selected: hsla(var(--color-accent-hsl), 0.2);
   --nav-item-weight: inherit;
   --nav-item-weight-hover: inherit;
@@ -857,6 +857,11 @@ body {
 
 .nav-files-container {
   --nav-item-size: 0.875rem;
+  --nlt-nav-focus-color: var(--color-base-05);
+}
+
+.nav-file-title:has(.nav-file-tag) .nav-file-title-content {
+  color: inherit;
 }
 
 .nav-file-title-content {
@@ -866,19 +871,18 @@ body {
   font-size: 0.875em;
   letter-spacing: -0.1px;
   filter: saturate(0.5);
+  margin-right: 1rem;
 }
 .nav-file-tag {
   color: var(--nav-item-color);
   margin-left: auto;
-  padding-left: 1rem;
 }
 .nav-file .nav-folder-title-content {
   font-weight: 600;
   color: var(--text-faint);
 }
-.nav-file-title .is-active {
-  color: var(--nav-item-background);
-  background-color: var(--nav-item-background-active);
+.nav-file.has-focus {
+  background-color: var(--nlt-nav-focus-color);
 }
 .nav-file-title {
   border-bottom-left-radius: 0;
@@ -887,17 +891,27 @@ body {
   border-top-right-radius: 0;
 }
 .nav-file-title.is-active {
+  color: var(--nav-item-background);
+  background-color: var(--nav-item-background-active);
+}
+.nav-file-title.is-active:hover {
   background-color: var(--background-modifier-active-hover) !important;
+}
+.nav-file-title:has(.nav-file-tag) .nav-file-title-content {
+  font-size: 75%;
+  font-weight: 300;
+  color: var(--text-faint);
 }
 .nav-file.is-flashing > * {
   color: var(--text-normal-reverse);
 }
 
-.nav-folder-title:hover {
-  background-color: var(--background-modifier-active-hover) !important;
-}
 .nav-folder.has-focus {
-  background-color: var(--background-modifier-cover);
+  background-color: var(--nlt-nav-focus-color);
+  padding-bottom: var(--size-2-2);
+}
+.nav-folder.is-collapsed {
+  padding-bottom: 0;
 }
 .nav-folder.mod-root {
   margin-top: 1rem;
