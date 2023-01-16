@@ -14,13 +14,14 @@
 @use "content/view-content";
 @use "content/gutters";
 @use "content/blockquote";
+@use "content/code";
+@use "content/links";
+@use "content/frontmatter";
 
 @use "components/icons";
 @use "components/nav";
 @use "components/modal";
 @use "content/headings";
-@use "content/code";
-@use "content/links";
 
 @use "features/hide_ribbon";
 @use "features/dim_inactive_panes";

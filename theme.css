@@ -67,9 +67,9 @@
   --yellow: hsl(40, 70.6%, 73.3%);
   --yellow-bright: hsl(40.1, 79.8%, 65.1%);
   --yellow-dark: hsl(39.9, 67.5%, 54.1%);
-  --orange: hsl(14.4, 50.5%, 62.7%);
-  --orange-bright: hsl(14.2, 49.1%, 54.5%);
-  --orange-dark: hsl(13.7, 50.2%, 48%);
+  --orange: hsl(20.4, 50.5%, 62.7%);
+  --orange-bright: hsl(20.2, 49.1%, 54.5%);
+  --orange-dark: hsl(20.7, 50.2%, 48%);
   --red: hsl(354.3, 42.3%, 56.5%);
   --red-bright: hsl(355.9, 40.2%, 50.2%);
   --red-dark: hsl(356.6, 41.1%, 42%);
@@ -680,6 +680,87 @@ body {
   padding: var(--size-4-2);
 }
 
+body {
+  --code-size: var(--font-small);
+  --code-background: var(--background-primary-alt);
+  --code-normal: var(--gray-02);
+  --code-comment: var(--gray-07);
+  --code-punctuation: var(--text-muted);
+  --code-tag: var(--color-red);
+  --code-value: var(--color-purple);
+  --code-string: var(--color-green);
+  --code-property: var(--color-cyan);
+  --code-function: var(--color-yellow);
+  --code-keyword: var(--color-pink);
+  --code-important: var(--color-orange);
+}
+
+.cm-inline-code,
+.cm-s-obsidian span.cm-inline-code.cm-hmd-indented-code,
+.markdown-preview-section pre code {
+  background-color: var(--code-background);
+  padding: 2px;
+  display: inline-block;
+}
+
+.cm-s-obsidian span.cm-comment {
+  color: var(--code-comment);
+}
+
+span.cm-inline-code.cm-formatting-code,
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-begin,
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-end {
+  color: var(--yellow);
+}
+
+body {
+  --link-color: var(--text-accent);
+  --link-color-hover: var(--text-accent-hover);
+  --link-decoration: underline;
+  --link-decoration-hover: underline;
+  --link-external-color: var(--text-accent);
+  --link-external-color-hover: var(--text-accent-hover);
+  --link-external-decoration: underline;
+  --link-external-decoration-hover: underline;
+  --link-external-filter: sepia(1);
+  --link-unresolved-color: var(--text-accent);
+  --link-unresolved-opacity: 0.7;
+  --link-unresolved-filter: saturate(0.5);
+  --link-unresolved-decoration-style: dashed;
+  --link-unresolved-decoration-color: hsla(var(--interactive-accent-hsl), 0.5);
+}
+
+span.cm-formatting.cm-formatting-link-string {
+  text-decoration: none;
+}
+
+.cm-line .cm-hmd-frontmatter {
+  font-size: 0.75rem;
+  line-height: 1em;
+}
+
+.cm-line:has(.cm-hmd-frontmatter) {
+  line-height: 1rem;
+}
+
+.cm-line:not(.cm-active) .cm-hmd-frontmatter {
+  filter: brightness(0.6);
+}
+
+.theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-number,
+.theme-dark .cm-s-obsidian .cm-math.cm-number,
+.theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-number {
+  color: var(--purple);
+}
+
+.theme-dark .cm-s-obsidian .cm-atom.cm-hmd-frontmatter {
+  color: var(--orange);
+}
+
+.theme-dark .cm-s-obsidian .cm-def.cm-hmd-frontmatter {
+  color: var(--green);
+}
+
 .collapse-icon > svg {
   display: none;
 }
@@ -963,60 +1044,6 @@ h6,
   font-family: var(--font-serif);
   margin-top: 1em;
   margin-bottom: 0.25em;
-}
-
-body {
-  --code-size: var(--font-small);
-  --code-background: var(--background-primary-alt);
-  --code-normal: var(--gray-02);
-  --code-comment: var(--gray-07);
-  --code-punctuation: var(--text-muted);
-  --code-tag: var(--color-red);
-  --code-value: var(--color-purple);
-  --code-string: var(--color-green);
-  --code-property: var(--color-cyan);
-  --code-function: var(--color-yellow);
-  --code-keyword: var(--color-pink);
-  --code-important: var(--color-orange);
-}
-
-.cm-inline-code,
-.cm-s-obsidian span.cm-inline-code.cm-hmd-indented-code,
-.markdown-preview-section pre code {
-  background-color: var(--code-background);
-  padding: 2px;
-  display: inline-block;
-}
-
-.cm-s-obsidian span.cm-comment {
-  color: var(--code-comment);
-}
-
-span.cm-inline-code.cm-formatting-code,
-.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-begin,
-.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock-end {
-  color: var(--yellow);
-}
-
-body {
-  --link-color: var(--text-accent);
-  --link-color-hover: var(--text-accent-hover);
-  --link-decoration: underline;
-  --link-decoration-hover: underline;
-  --link-external-color: var(--text-accent);
-  --link-external-color-hover: var(--text-accent-hover);
-  --link-external-decoration: underline;
-  --link-external-decoration-hover: underline;
-  --link-external-filter: sepia(1);
-  --link-unresolved-color: var(--text-accent);
-  --link-unresolved-opacity: 0.7;
-  --link-unresolved-filter: saturate(0.5);
-  --link-unresolved-decoration-style: dashed;
-  --link-unresolved-decoration-color: hsla(var(--interactive-accent-hsl), 0.5);
-}
-
-span.cm-formatting.cm-formatting-link-string {
-  text-decoration: none;
 }
 
 body {

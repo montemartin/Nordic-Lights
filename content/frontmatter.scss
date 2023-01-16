@@ -1,0 +1,23 @@
+.cm-line .cm-hmd-frontmatter {
+  font-size: 0.75rem;
+  line-height: 1em;
+}
+
+.cm-line:has(.cm-hmd-frontmatter) {
+  line-height: 1rem;
+}
+.cm-line:not(.cm-active) .cm-hmd-frontmatter {
+  filter: brightness(0.6);
+}
+
+.theme-dark .cm-s-obsidian .cm-hmd-frontmatter.cm-number,
+.theme-dark .cm-s-obsidian .cm-math.cm-number,
+.theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-number {
+  color: var(--purple);
+}
+.theme-dark .cm-s-obsidian .cm-atom.cm-hmd-frontmatter {
+  color: var(--orange);
+}
+.theme-dark .cm-s-obsidian .cm-def.cm-hmd-frontmatter {
+  color: var(--green);
+}
