@@ -1,28 +1,22 @@
-.cm-s-obsidian span.cm-link,
-.cm-s-obsidian span.cm-hmd-internal-link {
-  color: var(--interactive-accent);
-}
+body {
+  --link-color: var(--text-accent);
+  --link-color-hover: var(--text-accent-hover);
+  --link-decoration: underline;
+  --link-decoration-hover: underline;
 
-a,
-.cm-s-obsidian span.cm-url,
-.cm-hmd-internal-link {
-  color: var(--interactive-accent);
+  --link-external-color: var(--text-accent);
+  --link-external-color-hover: var(--text-accent-hover);
+  --link-external-decoration: underline;
+  --link-external-decoration-hover: underline;
+  --link-external-filter: sepia(1);
+
+  --link-unresolved-color: var(--text-accent);
+  --link-unresolved-opacity: 0.7;
+  --link-unresolved-filter: saturate(0.5);
+  --link-unresolved-decoration-style: dashed;
+  --link-unresolved-decoration-color: hsla(var(--interactive-accent-hsl), 0.5);
+}
+// Prevent underlines from appearing on parenthesis
+span.cm-formatting.cm-formatting-link-string {
   text-decoration: none;
-}
-
-.cm-s-obsidian span.cm-header.cm-url {
-  font-size: 65% !important;
-  font-weight: 400;
-}
-
-a:hover,
-.cm-hmd-internal-link:hover,
-.cm-s-obsidian span.cm-url:hover {
-  color: var(--interactive-accent-hover);
-  text-decoration: none;
-}
-
-.cm-hmd-internal-link,
-.cm-formatting-link {
-  font-style: normal;
 }

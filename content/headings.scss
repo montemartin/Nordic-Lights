@@ -2,7 +2,6 @@
   h#{$level},
   .markdown-rendered h#{$level},
   .cm-header.cm-header-#{$level} {
-    display: inline-block;
     font-size: $size;
     font-weight: $weight;
     font-variation-settings: "opsz" $opsz;

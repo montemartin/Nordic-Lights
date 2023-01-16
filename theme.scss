@@ -20,6 +20,7 @@
 @use "components/modal";
 @use "content/headings";
 @use "content/code";
+@use "content/links";
 
 @use "features/hide_ribbon";
 @use "features/dim_inactive_panes";
@@ -28,7 +29,6 @@
 @use "content/tags";
 @use "content/checklists";
 @use "content/search";
-@use "content/links";
 @use "content/graph";
 @use "content/images";
 @use "content/tables";
