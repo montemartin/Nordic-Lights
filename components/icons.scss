@@ -1,7 +1,7 @@
 .collapse-icon > svg {
   display: none;
 }
-.collapse-icon::before {
+.tree-item .collapse-icon::before {
   content: "↓";
   opacity: 0.8;
   transition: all 0.25s ease;
